@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html>
+<f:view xmlns:f="http://java.sun.com/jsf/core" beforePhase="#{backingBeanScope.backing_screen_master_history.bphase}"
+        xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+    <af:document title="history.jsf" id="d1" binding="#{backingBeanScope.backing_screen_master_history.d1}">
+        <af:form id="f1" binding="#{backingBeanScope.backing_screen_master_history.f1}">
+            <af:panelGroupLayout id="pgl1" layout="horizontal"
+                                 inlineStyle="height: 50px;width: 100%;background-color:#252839;"
+                                 styleClass="AFStretchWidth">
+                <af:outputLabel value="Toll on the Way"
+                                inlineStyle="color: #b5b5b7;font-family: 'Rouge Script', cursive;text-transform:capitalize ; font-size: 30px;font-weight: normal;line-height: 48px; margin: 0 0 50px;text-align: center;text-shadow: 1px 1px 2px #082b34; "/>
+                <af:link text="HISTORY" id="l1"
+                         inlineStyle="font-weight: bold;font-family:'Times New Roman';font-size:20px;float: right;margin-right: 35px;"/>
+                <!-- <af:link text="PROFILE" id="l2"
+                         inlineStyle="font-weight: bold;font-family:'Times New Roman';font-size:20px;margin-right: -30px;"
+                         binding="#{backingBeanScope.backing_screen_master_search.l2}"/>-->
+                <af:link text="PAY TOLL" action="#{backingBeanScope.backing_screen_master_history.pay}"
+                         inlineStyle="font-weight: bold;margin-right: -20px; font-family:'Times New Roman';font-size:20px;"/>
+                <af:button icon="/power.png" text="Logout" hoverIcon="/power-button-outline(1).png"
+                           action="#{backingBeanScope.backing_screen_master_history.logout}"
+                           inlineStyle="height: 20px;width: 20px;border: transparent ;background: transparent ;margin-right: 30px;color:#f2b632 "
+                           id="b2"/>
+            </af:panelGroupLayout>
+            <af:panelGroupLayout id="pgl2" layout="vertical"
+                                 binding="#{backingBeanScope.backing_screen_master_history.pgl2}">
+                                 <af:spacer height="20px"/>
+                <af:outputLabel value="Order History" id="ol1"  inlineStyle="color: #000052;margin-bottom: 10px;margin-top: 20px;font-family: 'Arial Black';font-size: 21pt;margin-left: 30px;"
+                               
+                                binding="#{backingBeanScope.backing_screen_master_history.ol1}"/>
+                <af:table var="row" rowBandingInterval="0" id="t1" inlineStyle="width: 530px; margin-left: 30px;"
+                          value="#{backingBeanScope.backing_screen_master_history.adfTable}"
+                          binding="#{backingBeanScope.backing_screen_master_history.t1}">
+                    <af:column sortable="false" headerText="Order NO" id="c1">
+                        <af:outputText value="#{row.a}" id="ot1"/>
+                    </af:column>
+                    <af:column sortable="false" headerText="Booth ID" id="c2">
+                        <af:outputText value="#{row.b}" id="ot2"/>
+                    </af:column>
+                    <af:column sortable="false" headerText="Date" id="c3">
+                        <af:outputText value="#{row.c}" id="ot3"/>
+                    </af:column>
+                    <af:column sortable="false" headerText="Vehicle No" id="c4">
+                        <af:outputText value="#{row.d}" id="ot4"/>
+                    </af:column>
+                    <af:column sortable="false" headerText="Amount" id="c5">
+                        <af:outputText value="#{row.e}" id="ot5"/>
+                    </af:column>
+                </af:table>
+            </af:panelGroupLayout>
+        </af:form>
+    </af:document>
+    <!--oracle-jdev-comment:auto-binding-backing-bean-name:backing_screen_master_history-->
+</f:view>

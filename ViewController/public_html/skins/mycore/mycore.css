@@ -1,0 +1,228 @@
+@charset "UTF-8";
+
+/**ADFFaces_Skin_File / DO NOT REMOVE**/
+@namespace af "http://xmlns.oracle.com/adf/faces/rich";
+@namespace dvt "http://xmlns.oracle.com/dss/adf/faces";
+
+af|link {
+    text-decoration: none;
+    text-decoration-line: none;
+    color: #b5b5b7;
+}
+
+af|showDetail {
+    color: #ff52ad;
+    background-color: Black;
+}
+
+af|inputText::content {
+    height: 20px;
+    font-size: 10pt;
+    font-family: Verdana;
+    font-smooth: always;
+    text-align: left;
+    text-transform: uppercase;
+    background: #F9F9Ff;
+    border-radius: 0px;
+    border: #9494ff solid 1px;
+}
+
+af|inputText::content:hover {
+    border: #004ae7 solid 1px;
+}
+
+af|inputDate::content {
+    height: 20px;
+    font-size: 10pt;
+    font-family: Verdana;
+    font-smooth: always;
+    text-align: left;
+    text-transform: uppercase;
+    background: #F9F9Ff;
+    border-radius: 0px;
+}
+
+af|inputDate::content:hover {
+    border: #c6d6ff solid 1px;
+}
+
+af|selectOneChoice::content {
+    height: 25px;
+    font-size: 10pt;
+    font-family: Verdana;
+    font-smooth: always;
+    text-align: left;
+    text-transform: uppercase;
+    background: #F9F9Ff;
+    border-radius: 0px;
+}
+
+af|selectOneChoice::content:hover {
+    border: #c6d6ff solid 1px;
+}
+
+af|outputLabel {
+    font-size: 10pt;
+    font-family: Verdana;
+    font-smooth: always;
+    text-transform: uppercase;
+}
+
+af|link::text {
+    text-decoration: none;
+    font-size: 14pt;
+    text-transform: uppercase;
+}
+
+af|link {
+    margin-left: 5px;
+    text-decoration: none;
+}
+
+af|link:hover {
+    color: #f2b632;
+}
+
+af|column::column-header-cell {
+    text-align: center;
+    font-size: 10pt;
+    height: 20px;
+    background: #c2c2c2;
+}
+
+af|button {
+    color: #252839;
+    background: #f2b632;
+    font-weight: bold;
+    border-radius: 0;
+    border-color: transparent ;
+    width: 70px;
+    background-image: none;
+    text-align: center;
+}
+
+af|button:hover {
+    color: #f2b632;
+    background: #252839;
+    font-weight: bold;
+    height: 20px;
+    width: 70px;
+    border-radius: 0;
+    background-image: none;
+}
+af|table{
+font-size: 21pt;
+text-transform: capitalize;
+padding:2px;
+}
+.AFButtonGradientStartHoverColor:alias {
+    color: #252839;
+}
+/*INFO: Color value exceeded range after adjustment: HSL(231, -23%, 26%)*/
+.AFButtonBorderHoverColor:alias {
+    color: #434343;
+}
+/*INFO: Color value exceeded range after adjustment: HSL(231, -31%, 33%)*/
+.AFButtonBorderBottomHoverColor:alias {
+    color: #555555;
+}
+
+.AFButtonGradientEndHoverColor:alias {
+    color: #393E58;
+}
+
+.AFButtonForegroundHover:alias {
+    font-weight: bold;
+    color: #f2b632;
+}
+
+.AFHoverPrimaryColor:alias {
+    color: White;
+}
+
+.AFHoverSecondaryColor:alias {
+    color: transparent;
+}
+@agent (touchScreen:none){
+
+    af|commandLink:hover[theme="dark"], af|goLink:hover[theme="dark"], af|link:hover[theme="dark"], af|commandImageLink:hover[theme="dark"], af|goImageLink:hover[theme="dark"], af|messages::component-link:hover[theme="dark"], af|calendar::list-day-of-month-link:hover[theme="dark"], af|calendar::list-title-link:hover[theme="dark"], af|calendar::month-grid-cell-header-day-link:hover[theme="dark"], af|calendar::month-overflow-link:hover[theme="dark"], af|calendar::week-header-day-link:hover[theme="dark"] {
+        text-decoration: none; 
+    }
+
+}
+
+af|column::column-header-cell {
+    text-align: center;
+    font-size: 10pt;
+    height: 20px;
+    background: #c2c2c2;
+}
+
+af|panelTabbed::tab-content, af|navigationPane-tabs::tab-content {
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+}
+
+af|panelTabbed::body {
+    border-radius: 0px;
+    border-width: 2px;
+}
+
+af|panelTabbed:iconified af|panelTabbed::tab-content {
+    border-radius: 0px;
+}
+
+af|panelTabbed::tab:selected af|panelTabbed::tab-content, af|navigationPane-tabs::tab:selected af|navigationPane-tabs::tab-content {
+    border-left-width: 2px;
+    border-right-width: 2px;
+}
+
+af|navigationPane-tabs::header af|navigationPane-tabs::tab:selected af|navigationPane-tabs::tab-content, af|panelTabbed::header af|panelTabbed::tab:selected af|panelTabbed::tab-content {
+    border-top-width: 2px;
+}
+
+af|panelTabbed:iconified af|panelTabbed::tab:selected af|panelTabbed::tab-content {
+    border-width: 2px;
+}
+
+af|panelBox {
+    border-radius: 0px;
+}
+
+af|panelAccordion::header {
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+}
+
+af|link:visited[theme="dark"], af|goLink:visited[theme="dark"], af|commandLink:visited[theme="dark"], af|commandImageLink:visited[theme="dark"], af|goImageLink:visited[theme="dark"] {
+    text-decoration: none;
+}
+
+af|link:active[theme="dark"], af|goLink:active[theme="dark"], af|commandLink:active[theme="dark"], af|commandImageLink:active[theme="dark"], af|goImageLink:active[theme="dark"], af|link:active:visited[theme="dark"], af|goLink:active:visited[theme="dark"], af|commandLink:active:visited[theme="dark"], af|commandImageLink:active:visited[theme="dark"], af|goImageLink:active:visited[theme="dark"] {
+    text-decoration: underline;
+}
+
+af|selectOneListbox::item:selected[theme="dark"], af|selectOneListbox::item:active[theme="dark"], af|selectOneChoice::item:highlighted[theme="dark"], af|selectManyListbox::item:highlighted[theme="dark"], af|selectOneChoice::item:selected[theme="dark"], af|selectManyChoice::item:highlighted[theme="dark"] {
+    border-style: none;
+    border-color: #F7F7F7;
+}
+
+af|menu::bar-item:highlighted {
+    background-color: #0052FF;
+}
+
+.AFLinkHover:alias {
+    text-decoration: none;
+}
+
+af|link:visited, af|goLink:visited, af|commandLink:visited, af|commandImageLink:visited, af|goImageLink:visited {
+    text-decoration: none;
+}
+
+.AFLinkActiveColor:alias {
+    color: #3131FF;
+}
+
+af|link:active, af|goLink:active, af|commandLink:active, af|commandImageLink:active, af|goImageLink:active {
+    text-decoration: underline;
+}

@@ -1,0 +1,234 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html>
+<f:view xmlns:f="http://java.sun.com/jsf/core" beforePhase="#{backingBeanScope.backing_screen_master_tolltax.bphase}"
+        xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+    <af:document title="tolltax.jsf" id="d1" binding="#{backingBeanScope.backing_screen_master_tolltax.d1}">
+        <af:form id="f1" binding="#{backingBeanScope.backing_screen_master_tolltax.f1}">
+            <af:panelGroupLayout layout="horizontal" inlineStyle="height: 50px;width: 100%;background-color: #252839;"
+                                 styleClass="AFStretchWidth">
+                <af:outputLabel value="Toll on the Way"
+                                inlineStyle="color: #b5b5b7;font-family: 'Rouge Script', cursive;text-transform:capitalize ; font-size: 30px;font-weight: normal;line-height: 48px; margin: 0 0 50px;text-align: center;text-shadow: 1px 1px 2px #082b34; "/>
+                <!--<af:link text="Booth Detail" id="l1"
+                         action="#{backingBeanScope.backing_screen_master_add_booth_detail.boothdetail}"
+                         inlineStyle="float: right;font-weight: bold;font-family:'Times New Roman';font-size:20px;"
+                         binding="#{backingBeanScope.backing_screen_master_add_booth_detail.l1}"/>
+                <af:link text="Staff Detail" id="l2"
+                         action="#{backingBeanScope.backing_screen_master_add_booth_detail.staffdetail}"
+                         inlineStyle="margin-left:150px;font-weight: bold;font-family:'Times New Roman';font-size:20px;"
+                         binding="#{backingBeanScope.backing_screen_master_add_booth_detail.l2}"/>
+                <af:link id="l3" binding="#{backingBeanScope.backing_screen_master_add_booth_detail.l3}"/>-->
+                <af:link text="Booth Detail" id="l1"
+                         action="#{backingBeanScope.backing_screen_master_tolltax.boothdetail}"
+                         inlineStyle="float: right;font-weight: bold;font-family:'Times New Roman';font-size:20px;"
+                         binding="#{backingBeanScope.backing_screen_master_tolltax.l1}"/>
+                <af:link text="Staff Detail" id="l2"
+                         action="#{backingBeanScope.backing_screen_master_tolltax.staffdetail}"
+                         inlineStyle="margin-left:150px;font-weight: bold;font-family:'Times New Roman';font-size:20px;"
+                         binding="#{backingBeanScope.backing_screen_master_tolltax.l2}"/>
+                <af:link text="Toll Tax" action="#{backingBeanScope.backing_screen_master_tolltax.tolltax}"
+                         inlineStyle="font-weight: bold;margin-left: -50px;float: right;margin-right: -10px; font-family:'Times New Roman';font-size:20px;"
+                         id="l3" binding="#{backingBeanScope.backing_screen_master_tolltax.l3}"/>
+                <af:link text="Payment"
+                         inlineStyle="font-weight: bold;margin-left: 50px;float: right;margin-right: 50px; font-family:'Times New Roman';font-size:20px;"
+                         action="#{backingBeanScope.backing_screen_master_tolltax.pay}" id="l4"
+                         binding="#{backingBeanScope.backing_screen_master_tolltax.l4}"/>
+                <af:button icon="/power.png" text="Logout" hoverIcon="/power-button-outline(1).png"
+                           action="#{backingBeanScope.backing_screen_master_tolltax.logout}"
+                           inlineStyle="height: 20px;width: 20px;border: transparent ;background: transparent ;margin-right: 30px;color:#f2b632 "
+                           id="b3" binding="#{backingBeanScope.backing_screen_master_tolltax.b3}"/>
+            </af:panelGroupLayout>
+            <af:panelGroupLayout id="pgl1" layout="vertical"
+                                 binding="#{backingBeanScope.backing_screen_master_tolltax.pgl1}">
+                <af:panelGroupLayout id="pgl2" layout="horizontal" inlineStyle="margin-top: 15px;"
+                                     binding="#{backingBeanScope.backing_screen_master_tolltax.pgl2}">
+                    <af:spacer width="15px"/>
+                    <af:outputLabel value="BOOTH ID" id="ol1"
+                                    binding="#{backingBeanScope.backing_screen_master_tolltax.ol1}"/>
+                    <af:spacer width="100px"/>
+                    <af:inputText label="" id="it1" binding="#{backingBeanScope.backing_screen_master_tolltax.it1}"/>
+                    <af:spacer width="150px"/>
+                    <!-- <af:outputLabel value="BOOTH NAME" id="ol2"
+                                    binding="#{backingBeanScope.backing_screen_master_tolltax.ol2}"/>
+                    <af:spacer width="100px"/>
+                    <af:inputText label="" id="it2" binding="#{backingBeanScope.backing_screen_master_tolltax.it2}"/>
+               -->
+                </af:panelGroupLayout>
+                <af:spacer height="80px"/>
+                <af:panelGroupLayout id="pgl4" layout="horizontal"
+                                     binding="#{backingBeanScope.backing_screen_master_tolltax.pgl4}">
+                    <af:outputLabel value="TYPE OF VEHICLE" inlineStyle="font-size: 10pt; margin-left: 15px;" id="ol3"
+                                    binding="#{backingBeanScope.backing_screen_master_tolltax.ol3}"/>
+                    <af:spacer width="50px"/>
+                    <af:outputLabel value="SINGLE JOURNEY" id="ol4" inlineStyle="margin-left: 115px;"
+                                    binding="#{backingBeanScope.backing_screen_master_tolltax.ol4}"/>
+                    <af:spacer width="45px"/>
+                    <af:outputLabel value="RETURN JOURNEY" id="ol5" inlineStyle="margin-left: 120px;"
+                                    binding="#{backingBeanScope.backing_screen_master_tolltax.ol5}"/>
+                    <af:spacer width="45px"/>
+                    <af:outputLabel value="MULTIPLE JOURNEY" id="ol6" inlineStyle="margin-left: 100px;"
+                                    binding="#{backingBeanScope.backing_screen_master_tolltax.ol6}"/>
+                    <af:spacer width="25px"/>
+                    <af:outputLabel value="COMMERCIAL VEHICLE IN DISTRICT" id="ol7" inlineStyle="margin-left: 70px;"
+                                    binding="#{backingBeanScope.backing_screen_master_tolltax.ol7}"/>
+                </af:panelGroupLayout>
+                <af:spacer height="15px"/>
+                <af:panelGroupLayout id="pgl5" layout="horizontal"
+                                     binding="#{backingBeanScope.backing_screen_master_tolltax.pgl5}">
+                    <af:outputLabel value="LIGHT MOTOR VEHICLE" id="ol9" inlineStyle="margin-left: 15px;"
+                                    binding="#{backingBeanScope.backing_screen_master_tolltax.ol9}"/>
+                    <af:spacer width="95px"/>
+                    <af:inputText label="" id="it3" binding="#{backingBeanScope.backing_screen_master_tolltax.it3}">
+                        <af:convertNumber minIntegerDigits="1" maxFractionDigits="2"/>
+                    </af:inputText>
+                    <af:spacer width="90px"/>
+                    <af:inputText label="" id="it4" binding="#{backingBeanScope.backing_screen_master_tolltax.it4}">
+                        <af:convertNumber minIntegerDigits="1" maxFractionDigits="2"/>
+                    </af:inputText>
+                    <af:spacer width="90px"/>
+                    <af:inputText label="" id="it5" binding="#{backingBeanScope.backing_screen_master_tolltax.it5}">
+                        <af:convertNumber minIntegerDigits="1" maxFractionDigits="2"/>
+                    </af:inputText>
+                    <af:spacer width="90px"/>
+                    <af:inputText label="" id="it6" binding="#{backingBeanScope.backing_screen_master_tolltax.it6}">
+                        <af:convertNumber minIntegerDigits="1" maxFractionDigits="2"/>
+                    </af:inputText>
+                </af:panelGroupLayout>
+                <af:spacer height="15px"/>
+                <af:panelGroupLayout id="pgl6" layout="horizontal"
+                                     binding="#{backingBeanScope.backing_screen_master_tolltax.pgl6}">
+                    <af:outputLabel value="LIGHT GOODS VEHICLE" inlineStyle="margin-left: 15px;" id="ol10"
+                                    binding="#{backingBeanScope.backing_screen_master_tolltax.ol10}"/>
+                    <af:spacer width="96px"/>
+                    <af:inputText label="" id="it7" binding="#{backingBeanScope.backing_screen_master_tolltax.it7}">
+                        <af:convertNumber minIntegerDigits="1" maxFractionDigits="2"/>
+                    </af:inputText>
+                    <af:spacer width="90px"/>
+                    <af:inputText label="" id="it8" binding="#{backingBeanScope.backing_screen_master_tolltax.it8}">
+                        <af:convertNumber minIntegerDigits="1" maxFractionDigits="2"/>
+                    </af:inputText>
+                    <af:spacer width="90px"/>
+                    <af:inputText label="" id="it9" binding="#{backingBeanScope.backing_screen_master_tolltax.it9}">
+                        <af:convertNumber minIntegerDigits="1" maxFractionDigits="2"/>
+                    </af:inputText>
+                    <af:spacer width="90px"/>
+                    <af:inputText label="" id="it10" binding="#{backingBeanScope.backing_screen_master_tolltax.it10}">
+                        <af:convertNumber minIntegerDigits="1" maxFractionDigits="2"/>
+                    </af:inputText>
+                </af:panelGroupLayout>
+                <af:spacer height="15px"/>
+                <af:panelGroupLayout id="pgl7" layout="horizontal"
+                                     binding="#{backingBeanScope.backing_screen_master_tolltax.pgl7}">
+                    <af:outputLabel value="BUS OR TRUCK(2 AXLES)" id="ol11" inlineStyle="margin-left: 15px;"
+                                    binding="#{backingBeanScope.backing_screen_master_tolltax.ol11}"/>
+                    <af:spacer width="84px"/>
+                    <af:inputText label="" id="it11" binding="#{backingBeanScope.backing_screen_master_tolltax.it11}">
+                        <af:convertNumber minIntegerDigits="1" maxFractionDigits="2"/>
+                    </af:inputText>
+                    <af:spacer width="90px"/>
+                    <af:inputText label="" id="it12" binding="#{backingBeanScope.backing_screen_master_tolltax.it12}">
+                        <af:convertNumber minIntegerDigits="1" maxFractionDigits="2"/>
+                    </af:inputText>
+                    <af:spacer width="90px"/>
+                    <af:inputText label="" id="it13" binding="#{backingBeanScope.backing_screen_master_tolltax.it13}">
+                        <af:convertNumber minIntegerDigits="1" maxFractionDigits="2"/>
+                    </af:inputText>
+                    <af:spacer width="90px"/>
+                    <af:inputText label="" id="it14" binding="#{backingBeanScope.backing_screen_master_tolltax.it14}">
+                        <af:convertNumber minIntegerDigits="1" maxFractionDigits="2"/>
+                    </af:inputText>
+                </af:panelGroupLayout>
+                <af:spacer height="15px"/>
+                <af:panelGroupLayout id="pgl8" layout="horizontal"
+                                     binding="#{backingBeanScope.backing_screen_master_tolltax.pgl8}">
+                    <af:outputLabel value="3 AXLES COMMERCIAL VEHICLE" id="ol12" inlineStyle="margin-left: 15px;"
+                                    binding="#{backingBeanScope.backing_screen_master_tolltax.ol12}"/>
+                    <af:spacer width="41.5px"/>
+                    <af:inputText label="" id="it15" binding="#{backingBeanScope.backing_screen_master_tolltax.it15}">
+                        <af:convertNumber minIntegerDigits="1" maxFractionDigits="2"/>
+                    </af:inputText>
+                    <af:spacer width="90px"/>
+                    <af:inputText label="" id="it16" binding="#{backingBeanScope.backing_screen_master_tolltax.it16}">
+                        <af:convertNumber minIntegerDigits="1" maxFractionDigits="2"/>
+                    </af:inputText>
+                    <af:spacer width="90px"/>
+                    <af:inputText label="" id="it17" binding="#{backingBeanScope.backing_screen_master_tolltax.it17}">
+                        <af:convertNumber minIntegerDigits="1" maxFractionDigits="2"/>
+                    </af:inputText>
+                    <af:spacer width="90px"/>
+                    <af:inputText label="" id="it18" binding="#{backingBeanScope.backing_screen_master_tolltax.it18}">
+                        <af:convertNumber minIntegerDigits="1" maxFractionDigits="2"/>
+                    </af:inputText>
+                </af:panelGroupLayout>
+                <af:spacer height="15px"/>
+                <af:panelGroupLayout id="pgl9" layout="horizontal"
+                                     binding="#{backingBeanScope.backing_screen_master_tolltax.pgl9}">
+                    <af:outputLabel value="FOUR TO SIX AXLES" id="ol13" inlineStyle="margin-left: 15px;"
+                                    binding="#{backingBeanScope.backing_screen_master_tolltax.ol13}"/>
+                    <af:spacer width="113px"/>
+                    <af:inputText label="" id="it19" binding="#{backingBeanScope.backing_screen_master_tolltax.it19}">
+                        <af:convertNumber minIntegerDigits="1" maxFractionDigits="2"/>
+                    </af:inputText>
+                    <af:spacer width="90px"/>
+                    <af:inputText label="" id="it20" binding="#{backingBeanScope.backing_screen_master_tolltax.it20}">
+                        <af:convertNumber minIntegerDigits="1" maxFractionDigits="2"/>
+                    </af:inputText>
+                    <af:spacer width="90px"/>
+                    <af:inputText label="" id="it21" binding="#{backingBeanScope.backing_screen_master_tolltax.it21}">
+                        <af:convertNumber minIntegerDigits="1" maxFractionDigits="2"/>
+                    </af:inputText>
+                    <af:spacer width="90px"/>
+                    <af:inputText label="" id="it22" binding="#{backingBeanScope.backing_screen_master_tolltax.it22}">
+                        <af:convertNumber minIntegerDigits="1" maxFractionDigits="2"/>
+                    </af:inputText>
+                </af:panelGroupLayout>
+                <af:spacer height="15px"/>
+                <af:panelGroupLayout id="pgl11" layout="horizontal"
+                                     binding="#{backingBeanScope.backing_screen_master_tolltax.pgl11}">
+                    <af:outputLabel value="7 OR MORE AXLES" id="ol14" inlineStyle="margin-left: 15px;"
+                                    binding="#{backingBeanScope.backing_screen_master_tolltax.ol14}"/>
+                    <af:spacer width="127.5px"/>
+                    <af:inputText label="" id="it24" binding="#{backingBeanScope.backing_screen_master_tolltax.it24}">
+                        <af:convertNumber minIntegerDigits="1" maxFractionDigits="2"/>
+                    </af:inputText>
+                    <af:spacer width="91.2px"/>
+                    <af:inputText label="" id="it25" binding="#{backingBeanScope.backing_screen_master_tolltax.it25}">
+                        <af:convertNumber minIntegerDigits="1" maxFractionDigits="2"/>
+                    </af:inputText>
+                    <af:spacer width="91.2px"/>
+                    <af:inputText label="" id="it26" binding="#{backingBeanScope.backing_screen_master_tolltax.it26}">
+                        <af:convertNumber minIntegerDigits="1" maxFractionDigits="2"/>
+                    </af:inputText>
+                    <af:spacer width="91.2px"/>
+                    <af:inputText label="" id="it27" binding="#{backingBeanScope.backing_screen_master_tolltax.it27}">
+                        <af:convertNumber minIntegerDigits="1" maxFractionDigits="2"/>
+                    </af:inputText>
+                </af:panelGroupLayout>
+                <af:spacer height="15px"/>
+                <af:panelGroupLayout id="pgl12" layout="horizontal"
+                                     binding="#{backingBeanScope.backing_screen_master_tolltax.pgl12}">
+                    <af:outputLabel value="MONTHLY PASS FOR VEHICLES" id="ol15" inlineStyle="margin-left: 15px;"
+                                    binding="#{backingBeanScope.backing_screen_master_tolltax.ol15}"/>
+                    <af:spacer width="45.2px"/>
+                    <af:inputText label="" id="it28" binding="#{backingBeanScope.backing_screen_master_tolltax.it28}">
+                        <af:convertNumber minIntegerDigits="1" maxFractionDigits="2"/>
+                    </af:inputText>
+                </af:panelGroupLayout>
+                <af:panelGroupLayout layout="horizontal" inlineStyle="margin-top: 20px; margin-left: 20px;">
+                    <af:button text="SAVE" id="b1"
+                               inlineStyle="width: 100.0px;height: 32px;text-align: center;font-size: 13.0pt;"
+                               action="#{backingBeanScope.backing_screen_master_tolltax.save}"
+                               binding="#{backingBeanScope.backing_screen_master_tolltax.b1}"/>
+                </af:panelGroupLayout>
+                <af:popup childCreation="deferred" autoCancel="disabled" id="p1"
+                          binding="#{backingBeanScope.backing_screen_master_tolltax.p1}">
+                    <af:dialog id="d2" type="ok" binding="#{backingBeanScope.backing_screen_master_tolltax.d2}">
+                        <f:facet name="buttonBar"/>
+                        <af:outputLabel value="Recoard Added Sucessfully!!" id="ol16"
+                                        binding="#{backingBeanScope.backing_screen_master_tolltax.ol16}"/>
+                    </af:dialog>
+                </af:popup>
+            </af:panelGroupLayout>
+        </af:form>
+    </af:document>
+    <!--oracle-jdev-comment:auto-binding-backing-bean-name:backing_screen_master_tolltax-->
+</f:view>

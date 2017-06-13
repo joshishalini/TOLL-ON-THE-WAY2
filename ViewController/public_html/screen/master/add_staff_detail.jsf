@@ -1,0 +1,314 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html>
+<f:view xmlns:f="http://java.sun.com/jsf/core"
+        beforePhase="#{backingBeanScope.backing_screen_master_add_staff_detail.bphase}"
+        xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+    <af:document title="add_staff_detail.jsf" id="d1"
+                 binding="#{backingBeanScope.backing_screen_master_add_staff_detail.d1}">
+        <af:form id="f1" binding="#{backingBeanScope.backing_screen_master_add_staff_detail.f1}">
+           <af:panelGroupLayout layout="horizontal" inlineStyle="height: 50px;width: 100%;background-color: #252839;"
+                                 styleClass="AFStretchWidth" >
+                <af:outputLabel value="Toll on the Way"
+                                inlineStyle="color: #b5b5b7;font-family: 'Rouge Script', cursive;text-transform:capitalize ; font-size: 30px;font-weight: normal;line-height: 48px; margin: 0 0 50px;text-align: center;text-shadow: 1px 1px 2px #082b34; "
+                              />
+                <af:link text="Booth Detail" id="l1"
+                         action="#{backingBeanScope.backing_screen_master_add_staff_detail.booth}"
+                         inlineStyle="float: right;font-weight: bold;font-family:'Times New Roman';font-size:20px;"
+                         binding="#{backingBeanScope.backing_screen_master_add_staff_detail.l1}"/>
+                <af:link text="Staff Detail" id="l2"
+                         action="#{backingBeanScope.backing_screen_master_add_staff_detail.staffdetail}"
+                         inlineStyle="margin-left:150px;font-weight: bold;font-family:'Times New Roman';font-size:20px;"
+                           binding="#{backingBeanScope.backing_screen_master_add_staff_detail.l2}"/>
+                <af:link text="Toll Tax" action="#{backingBeanScope.backing_screen_master_add_staff_detail.tolltax}"
+                         inlineStyle="font-weight: bold;margin-left: -50px;float: right;margin-right: -10px; font-family:'Times New Roman';font-size:20px;"
+                        binding="#{backingBeanScope.backing_screen_master_add_staff_detail.l3}"/>
+                <af:link text="Payment"   inlineStyle="font-weight: bold;margin-left: 30px;float: right;margin-right: 30px; font-family:'Times New Roman';font-size:20px;" action="#{backingBeanScope.backing_screen_master_add_staff_detail.pay}" id="l4" binding="#{backingBeanScope.backing_screen_master_add_staff_detail.l4}"/>
+                <af:button id="b2" icon="/power.png" text="Logout" hoverIcon="/power-button-outline(1).png"
+                           inlineStyle="height: 20px;width: 20px;border: transparent ;background: transparent ;margin-right: 30px;color:#f2b632 "
+                         action="#{backingBeanScope.backing_screen_master_add_staff_detail.logout}" 
+                           binding="#{backingBeanScope.backing_screen_master_add_staff_detail.b2}"/>
+            </af:panelGroupLayout>
+            
+            <af:panelGroupLayout id="pgl2" layout="vertical"
+                                 binding="#{backingBeanScope.backing_screen_master_add_staff_detail.pgl2}">
+                <af:spacer height="18px"/>
+                <af:panelGroupLayout id="pgl3" layout="horizontal"
+                                     binding="#{backingBeanScope.backing_screen_master_add_staff_detail.pgl3}">
+                     <af:spacer width="20px"/>
+                    <af:outputLabel value="ADD STAFF DETAIL" id="ol3" inlineStyle="color: #000052;margin-bottom: 10px;font-family: 'Arial Black';font-size: 21pt"
+                                    binding="#{backingBeanScope.backing_screen_master_add_staff_detail.ol3}"/>
+                </af:panelGroupLayout>
+                <af:spacer height="18px"/>
+                <af:panelGroupLayout id="pgl1" layout="horizontal"
+                                     binding="#{backingBeanScope.backing_screen_master_add_staff_detail.pgl1}">
+                      <af:spacer width="25px"/>
+                    <af:outputLabel value="ID" id="ol1"
+                                    binding="#{backingBeanScope.backing_screen_master_add_staff_detail.ol1}"/>
+                    <af:spacer width="218px"/>
+                    <af:inputText label="" id="it1" inlineStyle="text-align: center;" contentStyle="text-align: left;"
+                                  binding="#{backingBeanScope.backing_screen_master_add_staff_detail.it1}"/>
+                      <af:spacer width="223px"/>
+                    <af:outputLabel value="NAME" id="ol2"
+                                    binding="#{backingBeanScope.backing_screen_master_add_staff_detail.ol2}"/>
+                      <af:spacer width="120px"/>
+                    <af:inputText label="" id="it2"
+                                  binding="#{backingBeanScope.backing_screen_master_add_staff_detail.it2}"/>
+                </af:panelGroupLayout>
+                <af:spacer height="18px"/>
+                <af:panelGroupLayout id="pgl4" layout="horizontal"
+                                     binding="#{backingBeanScope.backing_screen_master_add_staff_detail.pgl4}">
+                   <af:spacer width="25px"/>
+                    <af:outputLabel value="FATHER'S NAME" id="ol4"
+                                    binding="#{backingBeanScope.backing_screen_master_add_staff_detail.ol4}"/>
+                    <af:spacer width="127.5px"/>
+                    <af:inputText label="" id="it3"
+                                  binding="#{backingBeanScope.backing_screen_master_add_staff_detail.it3}"/>
+                   <af:spacer width="226.5px"/>
+                    <af:outputLabel value="DOB" id="ol5"
+                                    binding="#{backingBeanScope.backing_screen_master_add_staff_detail.ol5}"/>
+                  <af:spacer width="131.5px"/>
+                    <af:inputDate label="" id="id1" placeholder="DD/MM/YYYY"
+                                  binding="#{backingBeanScope.backing_screen_master_add_staff_detail.id1}"/>
+                </af:panelGroupLayout>
+                <af:spacer height="18px"/>
+                <af:panelGroupLayout id="pgl5" layout="horizontal"
+                                     binding="#{backingBeanScope.backing_screen_master_add_staff_detail.pgl5}">
+                  <af:spacer width="25px"/>
+                    <af:outputLabel value="SEX" id="ol6"
+                                    binding="#{backingBeanScope.backing_screen_master_add_staff_detail.ol6}"/>
+                    <af:spacer width="205px"/>
+                    <af:selectOneChoice id="soc1" contentStyle="width: 178px;"
+                                        binding="#{backingBeanScope.backing_screen_master_add_staff_detail.soc1}">
+                        <af:selectItem label="MALE" value="MALE" id="si1"
+                                       binding="#{backingBeanScope.backing_screen_master_add_staff_detail.si1}"/>
+                        <af:selectItem label="FEMALE" value="FEMALE" id="si2"
+                                       binding="#{backingBeanScope.backing_screen_master_add_staff_detail.si2}"/>
+                    </af:selectOneChoice>
+                       <af:spacer width="222.5px"/>
+                    <af:outputLabel value="PHONE NO." id="ol7"
+                                    binding="#{backingBeanScope.backing_screen_master_add_staff_detail.ol7}"/>
+                   <af:spacer width="85.5px"/>
+                    <af:inputText label="" autoComplete="on" autoSubmit="true" id="it4"
+                 
+                                  binding="#{backingBeanScope.backing_screen_master_add_staff_detail.it4}">
+                        <af:validateLength minimum="10" maximum="10"/>
+                    </af:inputText>
+                </af:panelGroupLayout>
+                <af:spacer height="18px"/>
+                <af:panelGroupLayout id="pgl6" layout="horizontal"
+                                     binding="#{backingBeanScope.backing_screen_master_add_staff_detail.pgl6}">
+                   <af:spacer width="25px"/>
+                    <af:outputLabel value="E-MAIL" id="ol8"
+                                    binding="#{backingBeanScope.backing_screen_master_add_staff_detail.ol8}"/>
+                   <af:spacer width="186.5px"/>
+                    <af:inputText label="" id="it5" autoComplete="on" autoSubmit="true" placeholder="xyz@xyz.com"
+                                  binding="#{backingBeanScope.backing_screen_master_add_staff_detail.it5}"
+                                  validator="#{backingBeanScope.backing_screen_master_add_staff_detail.emailValidator}"/>
+                       <af:spacer width="222.5px"/>
+                    <af:outputLabel value="GRADUATION" id="ol9" 
+                                    binding="#{backingBeanScope.backing_screen_master_add_staff_detail.ol9}"/>
+                 <af:spacer width="75.5px"/>
+                    <af:selectOneChoice id="soc2" contentStyle="width: 178px;"
+                                        binding="#{backingBeanScope.backing_screen_master_add_staff_detail.soc2}">
+                        <af:selectItem label="UG" value="UG" id="si6"
+                                       binding="#{backingBeanScope.backing_screen_master_add_staff_detail.si6}"/>
+                        <af:selectItem label="PG" value="PG" id="si5"
+                                       binding="#{backingBeanScope.backing_screen_master_add_staff_detail.si5}"/>
+                    </af:selectOneChoice>
+                </af:panelGroupLayout>
+                <af:spacer height="18px"/>
+                <af:panelGroupLayout id="pgl7" layout="horizontal"
+                                     binding="#{backingBeanScope.backing_screen_master_add_staff_detail.pgl7}">
+                   <af:spacer width="25px"/>
+                    <af:outputLabel value="ADDRESS LINE 1" id="ol10"
+                                    binding="#{backingBeanScope.backing_screen_master_add_staff_detail.ol10}"/>
+                    <af:spacer width="125px"/>
+                    <af:inputText label="" id="it7"
+                                  binding="#{backingBeanScope.backing_screen_master_add_staff_detail.it7}"/>
+                     <af:spacer width="222.5px"/>
+                    <af:outputLabel value="ADDRESS LINE 2" id="ol11"
+                                    binding="#{backingBeanScope.backing_screen_master_add_staff_detail.ol11}"/>
+                    <af:spacer width="53.5px"/>
+                    <af:inputText label="" id="it8"
+                                  binding="#{backingBeanScope.backing_screen_master_add_staff_detail.it8}"/>
+                </af:panelGroupLayout>
+                <af:spacer height="18px"/>
+                <af:panelGroupLayout id="pgl8" layout="horizontal"
+                                     binding="#{backingBeanScope.backing_screen_master_add_staff_detail.pgl8}">
+                  <af:spacer width="25px"/>
+                    <af:outputLabel value="CITY" id="ol12"
+                                    binding="#{backingBeanScope.backing_screen_master_add_staff_detail.ol12}"/>
+                    <af:spacer width="202.5px"/>
+                    <af:inputText label="" id="it9"
+                                  binding="#{backingBeanScope.backing_screen_master_add_staff_detail.it9}"/>
+                   <af:spacer width="222.5px"/>
+                    <af:outputLabel value="PIN CODE" id="ol13"
+                                    binding="#{backingBeanScope.backing_screen_master_add_staff_detail.ol13}"/>
+                    <af:spacer width="98.5px"/>
+                    <af:inputText label="" id="it10"
+                                  binding="#{backingBeanScope.backing_screen_master_add_staff_detail.it10}"
+                                  maximumLength="6">
+</af:inputText>                                  
+                </af:panelGroupLayout>
+                <af:spacer height="18px"/>
+                <af:panelGroupLayout id="pgl9" layout="horizontal"
+                                     binding="#{backingBeanScope.backing_screen_master_add_staff_detail.pgl9}">
+                   <af:spacer width="25px"/>
+                    <af:outputLabel value="STATE" id="ol14"
+                                    binding="#{backingBeanScope.backing_screen_master_add_staff_detail.ol14}"/>
+                    <af:spacer width="193px"/>
+                    <af:selectOneChoice id="soc6" contentStyle="width: 178px;"
+                                        binding="#{backingBeanScope.backing_screen_master_add_staff_detail.soc6}">
+                        <af:selectItem label="Andhra Pradesh" value="Andhra Pradesh"/>
+                        <af:selectItem label="Arunachal Pradesh" value="Arunachal Pradesh"/>
+                        <af:selectItem label="Assam" value="Assam"/>
+                        <af:selectItem label="Bihar" value="Bihar"/>
+                        <af:selectItem label="Chhattisgarh" value="Chhattisgarh"/>
+                        <af:selectItem label="Goa" value="Goa"/>
+                        <af:selectItem label="Gujarat" value="Gujarat"/>
+                        <af:selectItem label="Haryana" value="Haryana"/>
+                        <af:selectItem label="Himachal Pradesh" value="Himachal Pradesh"/>
+                        <af:selectItem label="Jammu &amp; Kashmir" value="Jammu &amp; Kashmir"/>
+                        <af:selectItem label="Jharkhand" value="Jharkhand"/>
+                        <af:selectItem label="Karnataka" value="Karnataka"/>
+                        <af:selectItem label="kerala" value="kerala" id="si18"
+                                       binding="#{backingBeanScope.backing_screen_master_add_staff_detail.si18}"/>
+                        <af:selectItem label="Madhya Pradesh" value="Madhya Pradesh" id="si19"
+                                       binding="#{backingBeanScope.backing_screen_master_add_staff_detail.si19}"/>
+                        <af:selectItem label="Maharashtra" value="Maharashtra" id="si20"
+                                       binding="#{backingBeanScope.backing_screen_master_add_staff_detail.si20}"/>
+                        <af:selectItem label="Manipur" value="Manipur" id="si21"
+                                       binding="#{backingBeanScope.backing_screen_master_add_staff_detail.si21}"/>
+                        <af:selectItem label="Meghalaya" value="Meghalaya" id="si22"
+                                       binding="#{backingBeanScope.backing_screen_master_add_staff_detail.si22}"/>
+                        <af:selectItem label="Mizoram" value="Mizoram" id="si23"
+                                       binding="#{backingBeanScope.backing_screen_master_add_staff_detail.si23}"/>
+                        <af:selectItem label="Nagaland" value="Nagaland" id="si24"
+                                       binding="#{backingBeanScope.backing_screen_master_add_staff_detail.si24}"/>
+                        <af:selectItem label="Odisha" value="Odisha" id="si25"
+                                       binding="#{backingBeanScope.backing_screen_master_add_staff_detail.si25}"/>
+                        <af:selectItem label="Punjab" value="Punjab" id="si26"
+                                       binding="#{backingBeanScope.backing_screen_master_add_staff_detail.si26}"/>
+                        <af:selectItem label="Rajasthan" value="Rajasthan" id="si27"
+                                       binding="#{backingBeanScope.backing_screen_master_add_staff_detail.si27}"/>
+                        <af:selectItem label="Sikkim" value="Sikkim" id="si28"
+                                       binding="#{backingBeanScope.backing_screen_master_add_staff_detail.si28}"/>
+                        <af:selectItem label="Tamil Nadu" value="Tamil Nadu" id="si29"
+                                       binding="#{backingBeanScope.backing_screen_master_add_staff_detail.si29}"/>
+                        <af:selectItem label="Telangana" value="Telangana" id="si30"
+                                       binding="#{backingBeanScope.backing_screen_master_add_staff_detail.si30}"/>
+                        <af:selectItem label="Tripura" value="Tripura" id="si31"
+                                       binding="#{backingBeanScope.backing_screen_master_add_staff_detail.si31}"/>
+                        <af:selectItem label="Uttar Pradesh" value="Uttar Pradesh" id="si32"
+                                       binding="#{backingBeanScope.backing_screen_master_add_staff_detail.si32}"/>
+                        <af:selectItem label="Uttarakhand" value="Uttarakhand" id="si33"
+                                       binding="#{backingBeanScope.backing_screen_master_add_staff_detail.si33}"/>
+                        <af:selectItem label="West Bengal" value="West Bengal" id="si34"
+                                       binding="#{backingBeanScope.backing_screen_master_add_staff_detail.si34}"/>
+                    </af:selectOneChoice>
+                       <af:spacer width="228.5px"/>
+                    <af:outputLabel value="COUNTRY" id="ol15" 
+                                    binding="#{backingBeanScope.backing_screen_master_add_staff_detail.ol15}"/>
+                             <af:spacer width="90.5px"/>
+                    <af:selectOneChoice id="soc7" contentStyle="width: 178px;"
+                                        binding="#{backingBeanScope.backing_screen_master_add_staff_detail.soc7}">
+                        <af:selectItem label="India" value="India" id="si35"
+                                       binding="#{backingBeanScope.backing_screen_master_add_staff_detail.si35}"/>
+                        <af:selectItem label="Other" value="Other" id="si3"
+                                       binding="#{backingBeanScope.backing_screen_master_add_staff_detail.si3}"/>
+                    </af:selectOneChoice>
+                </af:panelGroupLayout>
+                <af:spacer height="18px"/>
+                <af:panelGroupLayout id="pgl10" layout="horizontal"
+                                     binding="#{backingBeanScope.backing_screen_master_add_staff_detail.pgl10}">
+                  <af:spacer width="25px"/>
+                    <af:outputLabel value="BOOTH ID" id="ol16"
+                                    binding="#{backingBeanScope.backing_screen_master_add_staff_detail.ol16}"/>
+                    <af:spacer width="167px"/>
+                    <af:inputText label="" id="it13"
+                                  binding="#{backingBeanScope.backing_screen_master_add_staff_detail.it13}"/>
+                  <af:spacer width="222.5px"/>
+                    <af:outputLabel value="POST" id="ol17"
+                                    binding="#{backingBeanScope.backing_screen_master_add_staff_detail.ol17}"/>
+                  <af:spacer width="124.5px"/>
+                    <af:selectOneChoice id="soc5" contentStyle="width: 178px;"
+                                        binding="#{backingBeanScope.backing_screen_master_add_staff_detail.soc5}">
+                        <af:selectItem label="GM" value="GM" id="si17"
+                                       binding="#{backingBeanScope.backing_screen_master_add_staff_detail.si17}"/>
+                        <af:selectItem label="SUPERVISOR" value="SUPERVISOR" id="si11"
+                                       binding="#{backingBeanScope.backing_screen_master_add_staff_detail.si11}"/>
+                        <af:selectItem label="SUB ASSISTANT TOLL MANAGER" value="SUB ASSISTANT TOLL MANAGER" id="si12"
+                                       binding="#{backingBeanScope.backing_screen_master_add_staff_detail.si12}"/>
+                        <af:selectItem label="EDITOR" value="EDITOR" id="si13"
+                                       binding="#{backingBeanScope.backing_screen_master_add_staff_detail.si13}"/>
+                        <af:selectItem label="CASHIER" value="CASHIER" id="si14"
+                                       binding="#{backingBeanScope.backing_screen_master_add_staff_detail.si14}"/>
+                        <af:selectItem label="TOLL COLLECTOR" value="TOLL COLLECTOR" id="si15"
+                                       binding="#{backingBeanScope.backing_screen_master_add_staff_detail.si15}"/>
+                        <af:selectItem label="SECURITY STAFF" value="SECURITY STAFF" id="si16"
+                                       binding="#{backingBeanScope.backing_screen_master_add_staff_detail.si16}"/>
+                    </af:selectOneChoice>
+                </af:panelGroupLayout>
+                <af:spacer height="18px"/>
+                <af:panelGroupLayout id="pgl11" layout="horizontal"
+                                     binding="#{backingBeanScope.backing_screen_master_add_staff_detail.pgl11}">
+                   <af:spacer width="25px"/>
+                    <af:outputLabel value="POLICE VERIFICATION" id="ol18" contentStyle="width: 178px;"
+                                    binding="#{backingBeanScope.backing_screen_master_add_staff_detail.ol18}"/>
+                     <af:spacer width="90px"/>
+                    <af:selectOneChoice id="soc3" contentStyle="width: 178px;"
+                                        binding="#{backingBeanScope.backing_screen_master_add_staff_detail.soc3}">
+                        <af:selectItem label="YES" value="YES" id="si8"
+                                       binding="#{backingBeanScope.backing_screen_master_add_staff_detail.si8}"/>
+                        <af:selectItem label="NO" value="NO" id="si7"
+                                       binding="#{backingBeanScope.backing_screen_master_add_staff_detail.si7}"/>
+                    </af:selectOneChoice>
+   <af:spacer width="220.5px"/>
+                    <af:outputLabel value="CRIME RECORD" id="ol19" 
+                                    binding="#{backingBeanScope.backing_screen_master_add_staff_detail.ol19}"/>
+                    <af:spacer width="64.5px"/>
+                    <af:selectOneChoice id="soc4" contentStyle="width: 178px;"
+                                        binding="#{backingBeanScope.backing_screen_master_add_staff_detail.soc4}">
+                        <af:selectItem label="YES" value="YES" id="si10"
+                                       binding="#{backingBeanScope.backing_screen_master_add_staff_detail.si10}"/>
+                        <af:selectItem label="NO" value="NO" id="si9"
+                                       binding="#{backingBeanScope.backing_screen_master_add_staff_detail.si9}"/>
+                    </af:selectOneChoice>
+                </af:panelGroupLayout>
+            </af:panelGroupLayout>
+            <af:spacer height="18px"/>
+            <af:panelGroupLayout id="pgl13" binding="#{backingBeanScope.backing_screen_master_add_staff_detail.pgl13}"/>
+            <af:panelGroupLayout id="pgl12" layout="horizontal"
+                                 binding="#{backingBeanScope.backing_screen_master_add_staff_detail.pgl12}">
+              <af:spacer width="25px"/>
+                <af:outputLabel value="USERNAME" id="ol20"
+                                binding="#{backingBeanScope.backing_screen_master_add_staff_detail.ol20}"/>
+                    <af:spacer width="163px"/>
+                <af:inputText label="" id="it14"
+                              binding="#{backingBeanScope.backing_screen_master_add_staff_detail.it14}"/>
+             <af:spacer width="226.5px"/>
+                <af:outputLabel value="PASSWORD" id="ol21"
+                                binding="#{backingBeanScope.backing_screen_master_add_staff_detail.ol21}"/>
+                <af:spacer width="84px"/>
+                <af:inputText label="" id="it15"
+                              binding="#{backingBeanScope.backing_screen_master_add_staff_detail.it15}"/>
+            </af:panelGroupLayout>
+            <af:spacer height="18px"/>
+            <af:panelGroupLayout id="pgl14" layout="horizontal"
+                                 binding="#{backingBeanScope.backing_screen_master_add_staff_detail.pgl14}">
+               <af:spacer width="25px"/>
+                <af:button text="SAVE" id="b1" inlineStyle="width: 100.0px;height: 32px;text-align: center;font-size: 13.0pt;" action="#{backingBeanScope.backing_screen_master_add_staff_detail.save}"
+                           binding="#{backingBeanScope.backing_screen_master_add_staff_detail.b1}"/>
+            </af:panelGroupLayout>
+            <af:popup childCreation="deferred" autoCancel="disabled" id="p1"
+                      binding="#{backingBeanScope.backing_screen_master_add_staff_detail.p1}">
+                <af:dialog id="d2" type="ok" binding="#{backingBeanScope.backing_screen_master_add_staff_detail.d2}">
+                    <f:facet name="buttonBar"/>
+                    <af:outputLabel value="Recoard Added Sucessfully!!" id="ol22"
+                                    binding="#{backingBeanScope.backing_screen_master_add_staff_detail.ol22}"/>
+                </af:dialog>
+            </af:popup>
+        </af:form>
+    </af:document>
+    <!--oracle-jdev-comment:auto-binding-backing-bean-name:backing_screen_master_add_staff_detail-->
+</f:view>

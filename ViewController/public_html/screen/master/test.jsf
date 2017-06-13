@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html>
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+    <af:document title="test.jsf" id="d1" binding="#{backingBeanScope.backing_screen_master_test.d1}">
+        <af:form id="f1" binding="#{backingBeanScope.backing_screen_master_test.f1}">
+            <af:inputText label="" id="mobNoBind" binding="#{backingBeanScope.backing_screen_master_test.mobNoBind}"/>
+            <af:button text="send" id="b1" actionListener="#{backingBeanScope.backing_screen_master_test.sendSMSAction}" binding="#{backingBeanScope.backing_screen_master_test.b1}"/>
+        </af:form>
+    </af:document>
+    <!--oracle-jdev-comment:auto-binding-backing-bean-name:backing_screen_master_test-->
+</f:view>

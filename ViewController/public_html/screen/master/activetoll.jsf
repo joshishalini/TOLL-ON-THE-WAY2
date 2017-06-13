@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html>
+<f:view xmlns:f="http://java.sun.com/jsf/core" beforePhase="#{backingBeanScope.backing_screen_master_activetoll.bphase}"
+        xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+    <af:document title="activetoll.jsf" id="d1" binding="#{backingBeanScope.backing_screen_master_activetoll.d1}">
+        <af:form id="f1" binding="#{backingBeanScope.backing_screen_master_activetoll.f1}">
+            <af:panelGroupLayout id="pgl1" layout="horizontal"
+                                 inlineStyle="height: 50px;width: 100%;background-color:#252839;"
+                                 styleClass="AFStretchWidth">
+                <af:outputLabel value="Toll on the Way"
+                                inlineStyle="color: #b5b5b7;font-family: 'Rouge Script', cursive;text-transform:capitalize ; font-size: 30px;font-weight: normal;line-height: 48px; margin: 0 0 50px;text-align: center;text-shadow: 1px 1px 2px #082b34; "/>
+                <af:link text="STAFF" action="#{backingBeanScope.backing_screen_master_activetoll.staff}" id="l1"
+                         inlineStyle="font-family:'Times New Roman';font-size:20px;font-weight: bold;"/>
+                <af:link text="USER" id="l2" action="#{backingBeanScope.backing_screen_master_activetoll.user}"
+                         inlineStyle="font-family:'Times New Roman';font-size:20px;font-weight: bold;"/>
+                <af:link text="Active Toll Booth" action="#{backingBeanScope.backing_screen_master_activetoll.toll}"
+                         inlineStyle="margin-left: -100px;float: right;margin-right: 30px; font-family:'Times New Roman';font-size:20px;font-weight: bold;"
+                         id="l3"/>
+            </af:panelGroupLayout>
+            <af:panelGroupLayout id="pgl2" layout="vertical"
+                                 binding="#{backingBeanScope.backing_screen_master_activetoll.pgl2}">
+                <af:spacer height="15px" width="25px"/>
+                <af:outputLabel value="Active Toll Booth" id="ol1"
+                                inlineStyle="color: #000052;margin-bottom: 10px;font-family: 'Arial Black';font-size: 21pt;margin-left: 30px;"
+                                binding="#{backingBeanScope.backing_screen_master_activetoll.ol1}"/>
+                <af:spacer height="15px" width="25px"/>
+                <af:table var="row" rowBandingInterval="0" id="t1" inlineStyle="width: 1250px; margin-left: 30px;"
+                          value="#{backingBeanScope.backing_screen_master_activetoll.adfTable}"
+                          binding="#{backingBeanScope.backing_screen_master_activetoll.t1}">
+                    <af:column sortable="false" headerText="ID" inlineStyle="margin: 10px;font-size: 12pt" id="c1">
+                        <af:outputText value="#{row.id}" inlineStyle="margin: 10px;font-size: 12pt" id="ot1"/>
+                    </af:column>
+                    <af:column sortable="false" headerText="NAME" inlineStyle="margin: 10px;font-size: 12pt;width: 350px;" width="350px;" id="c2">
+                        <af:outputText value="#{row.name}" inlineStyle="margin: 10px;font-size: 12pt;width: 350px;" id="ot2"/>
+                    </af:column>
+                    <af:column sortable="false" headerText="STATE" inlineStyle="margin: 10px;font-size: 12pt" width="120px" id="c3">
+                        <af:outputText value="#{row.state}" inlineStyle="margin: 10px;font-size: 12pt;width:120px;" id="ot3"/>
+                    </af:column>
+                    <af:column sortable="false" headerText="CITY" inlineStyle="margin: 10px;font-size: 12pt" id="c4">
+                        <af:outputText value="#{row.city}" inlineStyle="margin: 10px;font-size: 12pt" id="ot4"/>
+                    </af:column>
+                    <af:column sortable="false" headerText="E-MAIL" inlineStyle="margin: 10px;font-size: 12pt" width="150px" id="c5">
+                        <af:outputText value="#{row.a}" inlineStyle="margin: 10px;font-size: 12pt;width: 150px;" id="ot5"/>
+                    </af:column>
+                    <af:column sortable="false" headerText="PHONE NO." inlineStyle="margin: 10px;font-size: 12pt" id="c6">
+                        <af:outputText value="#{row.b}" inlineStyle="margin: 10px;font-size: 12pt" id="ot6"/>
+                    </af:column>
+                    <af:column sortable="false" headerText="WEB SITE" inlineStyle="margin: 10px;font-size: 12pt" width="180px;" id="c7">
+                        <af:outputText value="#{row.c}" inlineStyle="margin: 10px;font-size: 12pt;width: 180px;" id="ot7"/>
+                    </af:column>
+                    <af:column sortable="false" inlineStyle="margin: 10px;font-size: 12pt" headerText="NO. OF STAFF" id="c8">
+                        <af:outputText value="#{row.d}" inlineStyle="margin: 10px;font-size: 12pt" id="ot8"/>
+                    </af:column>
+                </af:table>
+            </af:panelGroupLayout>
+        </af:form>
+    </af:document>
+    <!--oracle-jdev-comment:auto-binding-backing-bean-name:backing_screen_master_activetoll-->
+</f:view>

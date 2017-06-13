@@ -1,0 +1,105 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html>
+<f:view xmlns:f="http://java.sun.com/jsf/core" beforePhase="#{backingBeanScope.backing_screen_master_search.bphase}"
+        xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+    <af:document title="search.jsf" id="d1" binding="#{backingBeanScope.backing_screen_master_search.d1}">
+        <af:form id="f1" binding="#{backingBeanScope.backing_screen_master_search.f1}">
+            <af:panelGroupLayout id="pgl4" layout="horizontal"
+                                 inlineStyle="height: 50px;width: 100%;background-color: #252839;"
+                                 binding="#{backingBeanScope.backing_screen_master_search.pgl4}">
+                <af:outputLabel value="Toll on the Way" id="ol2"
+                                inlineStyle="color: #b5b5b7;font-family: 'Rouge Script', cursive;text-transform:capitalize ; font-size: 30px;font-weight: normal;line-height: 48px; margin-right: 30px;text-align: center;text-shadow: 1px 1px 2px #082b34; "
+                                binding="#{backingBeanScope.backing_screen_master_search.ol2}"/>
+                <af:link text="HISTORY" id="l1" action="#{backingBeanScope.backing_screen_master_search.history}"
+                         inlineStyle="font-weight: bold;font-family:'Times New Roman';font-size:20px;float: right;margin-right: 35px;"
+                         binding="#{backingBeanScope.backing_screen_master_search.l1}"/>
+                <!--     <af:link text="PROFILE" id="l2"
+                         inlineStyle="font-weight: bold;font-family:'Times New Roman';font-size:20px;margin-right: -30px;"
+                         binding="#{backingBeanScope.backing_screen_master_search.l2}"/>-->
+                <af:link text="PAY TOLL"
+                         inlineStyle="font-weight: bold;margin-right: -20px; font-family:'Times New Roman';font-size:20px;"
+                         id="l3" binding="#{backingBeanScope.backing_screen_master_search.l3}"/>
+                <af:button icon="/power.png" text="Logout" hoverIcon="/power-button-outline(1).png"
+                           action="#{backingBeanScope.backing_screen_master_search.logout}"
+                           inlineStyle="height: 20px;width: 20px;border: transparent ;background: transparent ;margin-right: 30px;color:#f2b632 "
+                           id="b2"/>
+            </af:panelGroupLayout>
+            <af:spacer height="15px"/>
+            <af:panelGroupLayout id="pgl1" layout="vertical"
+                            binding="#{backingBeanScope.backing_screen_master_search.pgl1}">
+              <!--       <af:panelGroupLayout id="pgl2" layout="horizontal"
+                                     binding="#{backingBeanScope.backing_screen_master_search.pgl2}">
+                    <af:spacer width="400px"/>
+                    <af:outputLabel value="Choice" id="ol1"
+                                    binding="#{backingBeanScope.backing_screen_master_search.ol1}"/>
+                    <af:spacer width="35px"/>
+                    <af:selectOneChoice id="soc1" binding="#{backingBeanScope.backing_screen_master_search.soc1}">
+                        <af:selectItem label="By City" value="By City" id="si1"
+                                       binding="#{backingBeanScope.backing_screen_master_search.si1}"/>
+                        <af:selectItem label="By All" value="By All" id="si2"
+                                       binding="#{backingBeanScope.backing_screen_master_search.si2}"/>
+                    </af:selectOneChoice>
+                    <af:spacer width="35px"/>
+                    <af:outputLabel value="Filter" id="ol5"
+                                    binding="#{backingBeanScope.backing_screen_master_search.ol5}"/>
+                    <af:spacer width="35px"/>
+                    <af:inputText label="" id="it1" binding="#{backingBeanScope.backing_screen_master_search.it1}"/>
+                </af:panelGroupLayout>-->
+                <af:spacer height="15px"/>
+                <af:panelGroupLayout id="pgl3" layout="horizontal"
+                                     binding="#{backingBeanScope.backing_screen_master_search.pgl3}">
+                    <af:spacer width="400px"/>
+                    <af:table var="row" rowBandingInterval="0" id="t1"
+                              value="#{backingBeanScope.backing_screen_master_search.adfTable}"
+                              binding="#{backingBeanScope.backing_screen_master_search.t1}">
+                        <af:column sortable="false" headerText="ID" id="c1">
+                            <af:outputText value="#{row.id}" id="ot1"/>
+                        </af:column>
+                        <af:column sortable="false" headerText="CITY NAME" id="c2">
+                            <af:outputText value="#{row.name}" id="ot2"/>
+                        </af:column>
+                        <af:column sortable="false" headerText="STATE NAME" id="c5">
+                            <af:outputText value="#{row.state}" id="ot5"/>
+                        </af:column>
+                        <af:column sortable="false" headerText="BOOTH NAME" id="c3">
+                            <af:outputText value="#{row.booth}" id="ot3"/>
+                        </af:column>
+                        <af:column sortable="false" headerText="PAYMENT" id="c4">
+                            <af:button text="PAYMENT" action="#{backingBeanScope.backing_screen_master_search.payment}"
+                                       id="b1"/>
+                        </af:column>
+                    </af:table>
+                </af:panelGroupLayout>
+            </af:panelGroupLayout>
+            <af:spacer height="270px"/>
+            <af:panelGroupLayout layout="vertical" inlineStyle="background-color: #252839;height: 125.75px;"
+                                 styleClass="AFStretchWidth">
+                <af:outputLabel value="Terms and Conditions | Do Not Call Registry | Disclaimer | Multilingual Disclaimer | Code of Commitment |  Group Code of Business Conduct and Ethics | Use of Unparliamentary "
+                                inlineStyle="color: White;font-size: 10px;margin-left: 130px;margin-top: -30px"
+                                id="ol12" binding="#{backingBeanScope.backing_screen_master_search.ol12}"/>
+                <af:outputLabel inlineStyle="color: White;font-size: 10px;margin-left: 370px"
+                                value="Language by Customers | Privacy | USA Patriot Act Certification | Fair Practice Code for Lenders"
+                                id="ol3" binding="#{backingBeanScope.backing_screen_master_search.ol3}"/>
+                <af:spacer height="10px"/>
+                <af:outputLabel value="FOLLOW US :"
+                                inlineStyle="margin-left: 600px;font-family: Cooper ;font-weight: bolder;font-size:20px;color: White; "
+                                id="ol4" binding="#{backingBeanScope.backing_screen_master_search.ol4}"/>
+                <af:panelGroupLayout layout="horizontal">
+                    <af:spacer width="595px" height="20px" id="s1"/>
+                    <af:link id="l5" icon="/mainfb.png" hoverIcon="/1486731875_social_media_circled_network-11.png"
+                             targetFrame="_blank" destination="http://www.fb.com"
+                             binding="#{backingBeanScope.backing_screen_master_search.l5}"/>
+                    <af:spacer width="20px"/>
+                    <af:link icon="/maintw.png" hoverIcon="/1486731929_social_media_circled_network-06.png"
+                             targetFrame="_blank" destination="https://twitter.com/login" id="l6"
+                             binding="#{backingBeanScope.backing_screen_master_search.l6}"/>
+                    <af:spacer width="20px"/>
+                    <af:link icon="/mainin.png" hoverIcon="/1486731954_social_media_circled_network-03.png"
+                             destination="https://www.linkedin.com/uas/login" targetFrame="_blank" id="l7"
+                             binding="#{backingBeanScope.backing_screen_master_search.l7}"/>
+                </af:panelGroupLayout>
+            </af:panelGroupLayout>
+        </af:form>
+    </af:document>
+    <!--oracle-jdev-comment:auto-binding-backing-bean-name:backing_screen_master_search-->
+</f:view>

@@ -1,0 +1,67 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html>
+<f:view xmlns:f="http://java.sun.com/jsf/core" beforePhase="#{backingBeanScope.backing_screen_master_dummy.bphase}" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+    <af:document title="dummy.jsf" id="d1" binding="#{backingBeanScope.backing_screen_master_dummy.d1}">
+        <af:form id="f1" binding="#{backingBeanScope.backing_screen_master_dummy.f1}">
+            <af:panelGroupLayout id="pgl4" layout="horizontal"
+                                 inlineStyle="height: 50px;width: 100%;background-color: #252839;"
+                                  binding="#{backingBeanScope.backing_screen_master_dummy.pgl4}">
+                <af:outputLabel value="TOLL ON THE WAY" id="ol5"  inlineStyle="color: #b5b5b7;font-family: 'Rouge Script', cursive;text-transform:capitalize ; font-size: 30px;font-weight: normal;line-height: 48px; margin: 0 0 50px;text-align: center;text-shadow: 1px 1px 2px #082b34; "
+                                
+                                binding="#{backingBeanScope.backing_screen_master_dummy.ol5}"/>
+            </af:panelGroupLayout>
+            <af:spacer height="45px"/>
+            <af:inputText label="" id="mobNoBind" visible="false"
+                                  binding="#{backingBeanScope.backing_screen_master_dummy.mobNoBind}"/>
+                
+            <af:outputLabel value="DO NOT REFRESH!!!!!  PAYMENT FOR " id="ol6" inlineStyle="font-size: 12pt; margin-left: 420px"
+                            binding="#{backingBeanScope.backing_screen_master_dummy.ol6}"/>
+            <af:outputLabel value="" id="ol7"  inlineStyle="font-size: 12pt;"
+                            binding="#{backingBeanScope.backing_screen_master_dummy.ol7}"/>
+            <af:outputLabel value="RS.  DO NOT REFRESH!!!" id="ol8"  inlineStyle="font-size: 12pt;"
+                            binding="#{backingBeanScope.backing_screen_master_dummy.ol8}"/>
+            <af:panelGroupLayout id="pgl1"  halign="center" layout="vertical"    inlineStyle="border-radius:54px;background-color:#e9e9e9;border: White solid thin; height: 250px;width: 500px;margin:50px ;margin-left: 30%;padding: 35px;" binding="#{backingBeanScope.backing_screen_master_dummy.pgl1}">
+                <af:outputLabel value="CARD NUMBER" id="ol1"   inlineStyle="color: Black;font-size:8pt;margin-left: -160px;"
+                               binding="#{backingBeanScope.backing_screen_master_dummy.ol1}">
+                              </af:outputLabel>
+               <af:spacer height="6px"/>
+                <af:inputText label="" contentStyle="width:240px;height: 26px;margin-left: -11px;"  id="it1" binding="#{backingBeanScope.backing_screen_master_dummy.it1}">
+               <af:validateLength minimum="16" maximum="16"  />
+                   </af:inputText>
+                 <af:spacer height="6px"/>
+                <af:panelGroupLayout layout="horizontal" id="pgl2" binding="#{backingBeanScope.backing_screen_master_dummy.pgl2}">
+                    <af:outputLabel value="EXPIRE DATE" id="ol2" inlineStyle="color: Black;font-size:8pt;margin-left:65px"
+                                    binding="#{backingBeanScope.backing_screen_master_dummy.ol2}"/>
+                                    <af:spacer width="45px"/>
+                    <af:outputLabel value="CVV" id="ol3"  inlineStyle="color: Black;font-size:8pt;margin-right:150px "
+                                    binding="#{backingBeanScope.backing_screen_master_dummy.ol3}">
+                                   
+                                    </af:outputLabel>
+                </af:panelGroupLayout>
+                <af:spacer height="6px"/>
+                <af:panelGroupLayout id="pgl3" layout="horizontal" binding="#{backingBeanScope.backing_screen_master_dummy.pgl3}">
+                    <af:inputText label="" id="it2" placeholder="MM/DD" contentStyle="width:80px;height: 26px;margin-left: -14px;"
+                                  binding="#{backingBeanScope.backing_screen_master_dummy.it2}">
+                                  <af:convertNumber minIntegerDigits="4" integerOnly="true" maxIntegerDigits="4" type="number"  groupingUsed="false"  />
+                                  </af:inputText>
+                                  <af:spacer width="40px"/>
+                    <af:inputText label="" id="it3" contentStyle="width:50px;height: 26px;margin-left: -6px;" 
+                                  binding="#{backingBeanScope.backing_screen_master_dummy.it3}">
+                                   <af:convertNumber minIntegerDigits="3" integerOnly="true" maxIntegerDigits="3" />
+                                  </af:inputText>
+                       <af:image source="/cvv.jpg" id="i1" inlineStyle="width: 60px;height: 40px;" binding="#{backingBeanScope.backing_screen_master_dummy.i1}"/>
+                </af:panelGroupLayout>
+                 <af:spacer height="6px"/>
+                <af:outputLabel value="NAME ON CARD" id="ol4" inlineStyle="color: Black;font-size:8pt;margin-left: -150px"
+                                binding="#{backingBeanScope.backing_screen_master_dummy.ol4}"/>
+                 <af:spacer height="6px"/>
+                <af:inputText label="" contentStyle="width:240px;height: 26px;margin-left: -11px;"  id="it4" binding="#{backingBeanScope.backing_screen_master_dummy.it4}"/>
+                 <af:spacer height="6px"/>
+                <af:button text="PAY" action="#{backingBeanScope.backing_screen_master_dummy.pay}" actionListener="#{backingBeanScope.backing_screen_master_dummy.sendSMSAction}" inlineStyle="height: 26px;width: 245px;margin-left: -5px" id="b1" binding="#{backingBeanScope.backing_screen_master_dummy.b1}"/>
+            </af:panelGroupLayout>
+            <af:spacer height="90px"/>
+            <af:image source="/ab.JPG" id="i2" inlineStyle="width: 100%" binding="#{backingBeanScope.backing_screen_master_dummy.i2}"/>
+        </af:form>
+    </af:document>
+    <!--oracle-jdev-comment:auto-binding-backing-bean-name:backing_screen_master_dummy-->
+</f:view>

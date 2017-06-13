@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html>
+<f:view xmlns:f="http://java.sun.com/jsf/core" beforePhase="#{backingBeanScope.backing_stafflogin.bphase}" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+    <af:document title="stafflogin.jsf" id="d1" binding="#{backingBeanScope.backing_stafflogin.d1}">
+        <af:form id="f1" binding="#{backingBeanScope.backing_stafflogin.f1}">
+            <af:panelGroupLayout id="pgl1" layout="horizontal"
+                                 inlineStyle="height: 50px;width: 100%;background-color:#252839;"
+                                 binding="#{backingBeanScope.backing_stafflogin.pgl1}" styleClass="AFStretchWidth">
+                <af:outputLabel value="Toll on the Way"
+                                inlineStyle="color: #b5b5b7;font-family: 'Rouge Script', cursive;text-transform:capitalize ; font-size: 30px;font-weight: normal;line-height: 48px; margin: 0 0 50px;text-align: center;text-shadow: 1px 1px 2px #082b34; "
+                                id="ol1" binding="#{backingBeanScope.backing_stafflogin.ol1}"/>
+                <af:link text="STAFF" action="#{backingBeanScope.backing_stafflogin.staff}" id="l1"
+                         inlineStyle="font-family:'Times New Roman';font-size:20px;font-weight: bold;"
+                         binding="#{backingBeanScope.backing_stafflogin.l1}"/>
+                <af:link text="USER" id="l2" action="#{backingBeanScope.backing_stafflogin.user}"
+                         inlineStyle="font-family:'Times New Roman';font-size:20px;font-weight: bold;"
+                         binding="#{backingBeanScope.backing_stafflogin.l2}"/>
+                <af:link text="Active Toll Booth" action="#{backingBeanScope.backing_stafflogin.toll}"
+                         inlineStyle="margin-left: -100px;float: right;margin-right: 30px; font-family:'Times New Roman';font-size:20px;font-weight: bold;"
+                         id="l3" binding="#{backingBeanScope.backing_stafflogin.l3}"/>
+            </af:panelGroupLayout>
+            <af:panelGroupLayout layout="horizontal"
+                                 inlineStyle="background-image:url(61.jpg) ;height:609px;width: 100%;">
+                <af:panelGroupLayout inlineStyle="background:rgb(250,250,250);background: rgba(250,250,250,0.8)  ;border: White solid thin; height: 200px;width: 500px;margin:50px ;margin-left: 30%;padding: 35px;"
+                                     halign="center" layout="vertical">
+                    <af:outputLabel value="user name"
+                                    inlineStyle="color: Black;font-size:10.5pt; font-weight: bold;margin-left: -150px;"
+                                    id="ol4" binding="#{backingBeanScope.backing_stafflogin.ol4}"/>
+                    <af:spacer height="10px"/>
+                    <af:inputText placeholder="User Name" label="" id="it2"
+                                  contentStyle="height: 25px;width: 250px;color: black;"
+                                  binding="#{backingBeanScope.backing_stafflogin.it2}"/>
+                    <af:spacer height="30px"/>
+                    <af:outputLabel value="password" id="ol5"
+                                    inlineStyle="color: Black;font-size:10.5pt; font-weight: bold;margin-left: -150px;"
+                                    binding="#{backingBeanScope.backing_stafflogin.ol5}"/>
+                    <af:spacer height="5px"/>
+                    <af:inputText placeholder="Password" label="" id="it3"
+                                  contentStyle="height: 25px;width: 250px;color: black;"
+                                  binding="#{backingBeanScope.backing_stafflogin.it3}" secret="true"/>
+                    <af:spacer height="30px"/>
+                    <af:button text="Login" id="b2" binding="#{backingBeanScope.backing_stafflogin.b2}"
+                               action="#{backingBeanScope.backing_stafflogin.doLogin}"
+                               inlineStyle="font-weight:bolder ;font-family:Verdana; font-size:10.0pt; margin-left: 45px; width: 70pt; height: 20pt; font-effect:emboss; font-smooth:always; font-style:normal;text-align:center;vertical-align:middle;padding:5px 10px;text-transform: uppercase; "/>
+                </af:panelGroupLayout>
+            </af:panelGroupLayout>
+        </af:form>
+    </af:document>
+    <!--oracle-jdev-comment:auto-binding-backing-bean-name:backing_stafflogin-->
+</f:view>

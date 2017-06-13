@@ -1,0 +1,54 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html>
+<f:view xmlns:f="http://java.sun.com/jsf/core" beforePhase="#{backingBeanScope.backing_screen_master_done.bphase}" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+    <af:document title="done.jsf" id="d1" binding="#{backingBeanScope.backing_screen_master_done.d1}">
+        <af:form id="f1" binding="#{backingBeanScope.backing_screen_master_done.f1}">
+             <af:panelGroupLayout layout="horizontal"
+                                 inlineStyle="height: 50px;width: 100%;background-color: #252839;"   >
+                <af:outputLabel value="TOLL ON THE WAY" id="ol5"  inlineStyle="color: #b5b5b7;font-family: 'Rouge Script', cursive;text-transform:capitalize ; font-size: 30px;font-weight: normal;line-height: 48px; margin: 0 0 50px;text-align: center;text-shadow: 1px 1px 2px #082b34; "
+                              binding="#{backingBeanScope.backing_screen_master_done.ol5}"/>
+                <af:button text="Home" id="b3"   inlineStyle="height: 20px;width: 20px;border: transparent ;background: transparent ;margin-right: 30px;color:#f2b632 "
+                         hoverIcon="/home.png" icon="/home(1).png"  action="#{backingBeanScope.backing_screen_master_done.home}" binding="#{backingBeanScope.backing_screen_master_done.b3}"/>
+                 <af:button icon="/power.png" text="Logout" hoverIcon="/power-button-outline(1).png"
+                           inlineStyle="height: 20px;width: 20px;border: transparent ;background: transparent ;margin-right: 30px;color:#f2b632 " id="b2"
+                        action="#{backingBeanScope.backing_screen_master_done.logout}"  />
+                </af:panelGroupLayout>
+       <af:image source="/done.JPG" inlineStyle="height: 100px;width: 100px;margin-left: 620px;margin-top: 100px;"  id="i1" binding="#{backingBeanScope.backing_screen_master_done.i1}"/>
+            <af:spacer height="25px"/>
+            <af:panelGroupLayout id="pgl1" layout="vertical" binding="#{backingBeanScope.backing_screen_master_done.pgl1}">
+            <af:outputLabel value="Payment Successful" id="ol1" inlineStyle="font-size: 20pt;margin-top: 35px;margin-left: 550px;text-transform: none;" binding="#{backingBeanScope.backing_screen_master_done.ol1}"/>
+            <af:spacer height="25px" />
+            <af:outputLabel value="We will SMS you a receipt confirming your payment shortly." inlineStyle="font-size: 12pt;margin-top: 35px;margin-left: 450px;text-transform: none;" id="ol2" binding="#{backingBeanScope.backing_screen_master_done.ol2}"/>
+       </af:panelGroupLayout>
+       <af:spacer height="176px"/>
+            <af:panelGroupLayout layout="vertical" inlineStyle="background-color: #252839;height: 125.75px;"
+                                 styleClass="AFStretchWidth">
+                <af:outputLabel value="Terms and Conditions | Do Not Call Registry | Disclaimer | Multilingual Disclaimer | Code of Commitment |  Group Code of Business Conduct and thics | Use of Unparliamentary "
+                                inlineStyle="color: White;font-size: 10px;margin-left: 130px;margin-top: -30px"
+                                id="ol142" binding="#{backingBeanScope.backing_screen_master_done.ol42}"/>
+                <af:outputLabel inlineStyle="color: White;font-size: 10px;margin-left: 370px"
+                                value="Language by Customers | Privacy | USA Patriot Act Certification | Fair Practice Code for Lenders"
+                                id="ol43" binding="#{backingBeanScope.backing_screen_master_done.ol43}"/>
+                <af:spacer height="10px"/>
+                <af:outputLabel value="FOLLOW US :"
+                                inlineStyle="margin-left: 600px;font-family: Cooper ;font-weight: bolder;font-size:20px;color: White; "
+                                id="ol44" binding="#{backingBeanScope.backing_screen_master_done.ol44}"/>
+                <af:panelGroupLayout layout="horizontal">
+                    <af:spacer width="595px" height="20px" id="s1"/>
+                    <af:link id="l5" icon="/mainfb.png" hoverIcon="/1486731875_social_media_circled_network-11.png"
+                             targetFrame="_blank" destination="http://www.fb.com"
+                             binding="#{backingBeanScope.backing_screen_master_done.l5}"/>
+                    <af:spacer width="20px"/>
+                    <af:link icon="/maintw.png" hoverIcon="/1486731929_social_media_circled_network-06.png"
+                             targetFrame="_blank" destination="https://twitter.com/login" id="l6"
+                             binding="#{backingBeanScope.backing_screen_master_done.l6}"/>
+                    <af:spacer width="20px"/>
+                    <af:link icon="/mainin.png" hoverIcon="/1486731954_social_media_circled_network-03.png"
+                             destination="https://www.linkedin.com/uas/login" targetFrame="_blank" id="l7"
+                             binding="#{backingBeanScope.backing_screen_master_done.l7}"/>
+                </af:panelGroupLayout>
+            </af:panelGroupLayout>
+        </af:form>
+    </af:document>
+    <!--oracle-jdev-comment:auto-binding-backing-bean-name:backing_screen_master_done-->
+</f:view>

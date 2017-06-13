@@ -1,0 +1,138 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html>
+<f:view xmlns:f="http://java.sun.com/jsf/core" beforePhase="#{backingBeanScope.backing_screen_master_staff_list.bphase}"
+        xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+    <af:document title="staff_list.jsf" id="d1" inlineStyle="overflow-x: hidden;"
+                 binding="#{backingBeanScope.backing_screen_master_staff_list.d1}">
+        <af:form id="f1" binding="#{backingBeanScope.backing_screen_master_staff_list.f1}">
+            <af:panelGroupLayout id="pgl1" layout="horizontal"
+                                 inlineStyle="height: 50px;width: 100%;background-color: #252839;"
+                                 binding="#{backingBeanScope.backing_screen_master_staff_list.pgl1}"
+                                 styleClass="AFStretchWidth">
+                <af:outputLabel value="Toll on the Way"
+                                inlineStyle="color: #b5b5b7;font-family: 'Rouge Script', cursive;text-transform:capitalize ; font-size: 30px;font-weight: normal;line-height: 48px; margin: 0 0 50px;text-align: center;text-shadow: 1px 1px 2px #082b34; "
+                                id="ol1" binding="#{backingBeanScope.backing_screen_master_staff_list.ol1}"/>
+                <af:link text="Booth Detail" id="l1"
+                         action="#{backingBeanScope.backing_screen_master_staff_list.boothdetail}"
+                         inlineStyle="float: right;font-weight: bold;font-family:'Times New Roman';font-size:20px;"
+                         binding="#{backingBeanScope.backing_screen_master_staff_list.l1}"/>
+                <af:link text="Staff Detail" id="l2"
+                         action="#{backingBeanScope.backing_screen_master_staff_list.staffdetail}"
+                         inlineStyle="margin-left:150px;font-weight: bold;font-family:'Times New Roman';font-size:20px;"
+                         binding="#{backingBeanScope.backing_screen_master_staff_list.l2}"/>
+                <af:link text="Toll Tax" action="#{backingBeanScope.backing_screen_master_staff_list.tolltax}"
+                         inlineStyle="font-weight: bold;margin-left: -50px;float: right;margin-right: -10px; font-family:'Times New Roman';font-size:20px;"
+                         id="l3" binding="#{backingBeanScope.backing_screen_master_staff_list.l3}"/>
+                <af:link text="Payment" action="#{backingBeanScope.backing_screen_master_staff_list.pay}"
+                         inlineStyle="font-weight: bold;margin-left: 50px;float: right;margin-right: 50px; font-family:'Times New Roman';font-size:20px;"
+                         id="l8" binding="#{backingBeanScope.backing_screen_master_staff_list.l8}"/>
+                <af:button id="b3" icon="/power.png" text="Logout" hoverIcon="/power-button-outline(1).png"
+                           inlineStyle="height: 20px;width: 20px;border: transparent ;background: transparent ;margin-right: 30px;color:#f2b632 "
+                           action="#{backingBeanScope.backing_screen_master_staff_list.logout}"
+                           binding="#{backingBeanScope.backing_screen_master_staff_list.b3}"/>
+            </af:panelGroupLayout>
+            <af:spacer height="20px"/>
+            <af:outputLabel value="Staff List"
+                            inlineStyle="color: #000052;margin-bottom: 10px;margin-left: 20px;font-family: 'Arial Black';font-size: 21pt"
+                            id="ol21"/>
+            <af:panelGroupLayout layout="vertical" styleClass="AFStretchWidth" inlineStyle="margin-left: 10px;"
+                                 id="pgl2">
+                <af:spacer height="20px"/>
+                <af:panelGroupLayout layout="horizontal" inlineStyle="width: 60%" id="pgl3">
+                    <!-- <af:panelGroupLayout layout="horizontal" id="pgl4">
+                        <af:outputLabel value="choice" inlineStyle="font-size: 12pt;" id="ol2"/>
+                        <af:spacer width="85px" id="s1"/>
+                        <af:selectOneChoice id="soc1" autoSubmit="true"  label=""
+                                            valueChangeListener="#{backingBeanScope.backing_screen_master_staff_list.choice_val_change}"
+                                            binding="#{backingBeanScope.backing_screen_master_staff_list.soc1}">
+                            <af:selectItem label="BY ID" value="BY ID" id="si1"
+                                           binding="#{backingBeanScope.backing_screen_master_staff_list.si1}"/>
+                            <af:selectItem label="BY STAFF NAME" value="BY STAFF NAME" id="si2"
+                                           binding="#{backingBeanScope.backing_screen_master_staff_list.si2}"/>
+                            <af:selectItem label="BY JOB POST" value="BY JOB POST" id="si3"
+                                           binding="#{backingBeanScope.backing_screen_master_staff_list.si3}"/>
+                            <af:selectItem label="BY ALL" value="BY ALL" id="si4"
+                                           binding="#{backingBeanScope.backing_screen_master_staff_list.si4}"/>
+                        </af:selectOneChoice>
+                    </af:panelGroupLayout>
+                    <af:panelGroupLayout layout="horizontal">
+                        <af:outputLabel value="filter" inlineStyle="font-size: 12pt;" id="ol6"/>
+                        <af:spacer width="40px"/>
+                        <af:inputText label="" id="it1" autoSubmit="true"  autoComplete="on"
+                                      valueChangeListener="#{backingBeanScope.backing_screen_master_staff_list.input_valchange}"
+                                      binding="#{backingBeanScope.backing_screen_master_staff_list.it1}"/>
+                    </af:panelGroupLayout>-->
+                    <af:panelGroupLayout layout="horizontal">
+                        <af:button text="ADD STAFF DETAIL" id="b1" inlineStyle="width: 150px;height: 25px;margin-left: 
+                        20px;" action="#{backingBeanScope.backing_screen_master_staff_list.create}"
+                                   binding="#{backingBeanScope.backing_screen_master_staff_list.b1}"/>
+                    </af:panelGroupLayout>
+                </af:panelGroupLayout>
+                <af:spacer height="20px" id="s3"/>
+                <af:panelGroupLayout layout="horizontal" inlineStyle="width: 66.5px; margin-left: 10px;" id="pgl6">
+                    <af:table var="row" rowBandingInterval="0" id="t1"
+                              value="#{backingBeanScope.backing_screen_master_staff_list.adfTable}"
+                              binding="#{backingBeanScope.backing_screen_master_staff_list.t1}">
+                        <af:column sortable="false" headerText="STAFF ID" id="c1">
+                            <af:outputText value="#{row.id}" id="ot1"/>
+                        </af:column>
+                        <af:column sortable="false" headerText="STAFF NAME" id="c2">
+                            <af:outputText value="#{row.name}" id="ot2"/>
+                        </af:column>
+                        <af:column sortable="false" headerText="PHONE NO." id="c3">
+                            <af:outputText value="#{row.phno}" id="ot3"/>
+                        </af:column>
+                        <af:column sortable="false" headerText="STAFF POST" id="c4">
+                            <af:outputText value="#{row.staff}" id="ot4"/>
+                        </af:column>
+                        <af:column sortable="false" headerText="USERNAME" id="c5">
+                            <af:outputText value="#{row.user}" id="ot5"/>
+                        </af:column>
+                        <af:column sortable="false" headerText="BOOTH ID" id="c6">
+                            <af:outputText value="#{row.booth}" id="ot6"/>
+                        </af:column>
+                        <af:column sortable="false" headerText="VIEW" id="c7">
+                            <af:button text="View" id="b2" partialSubmit="true"
+                                       action="#{backingBeanScope.backing_screen_master_staff_list.edit}"></af:button>
+                        </af:column>
+                        <!--<af:column sortable="false" headerText="VIEW" id="c8">
+                            <af:button text="View" id="b3" partialSubmit="true"
+                                       action="#{backingBeanScope.backing_screen_master_staff_list.view}"></af:button>
+                        </af:column>-->
+                    </af:table>
+                </af:panelGroupLayout>
+                <af:spacer height="220px"/>
+            </af:panelGroupLayout>
+            <af:panelGroupLayout id="pgl7" layout="vertical" inlineStyle="background-color: #252839;height: 125.75px;"
+                                 binding="#{backingBeanScope.backing_screen_master_staff_list.pgl2}"
+                                 styleClass="AFStretchWidth">
+                <af:outputLabel value="Terms and Conditions | Do Not Call Registry | Disclaimer | Multilingual Disclaimer | Code of Commitment |  Group Code of Business Conduct and Ethics | Use of Unparliamentary "
+                                inlineStyle="color: White;font-size: 10px;margin-left: 130px;margin-top: -30px" id="ol5"
+                                binding="#{backingBeanScope.backing_screen_master_staff_list.ol2}"/>
+                <af:outputLabel inlineStyle="color: White;font-size: 10px;margin-left: 370px"
+                                value="Language by Customers | Privacy | USA Patriot Act Certification | Fair Practice Code for Lenders"
+                                id="ol3" binding="#{backingBeanScope.backing_screen_master_staff_list.ol3}"/>
+                <af:spacer height="10px"/>
+                <af:outputLabel value="FOLLOW US :"
+                                inlineStyle="margin-left: 600px;font-family: Cooper ;font-weight: bolder;font-size:20px;color: White; "
+                                id="ol4" binding="#{backingBeanScope.backing_custlogin.ol4}"/>
+                <af:panelGroupLayout id="pgl5" layout="horizontal"
+                                     binding="#{backingBeanScope.backing_screen_master_staff_list.pgl3}">
+                    <af:spacer width="595px" height="50px" id="s2"/>
+                    <af:link id="l5" icon="/mainfb.png" hoverIcon="/1486731875_social_media_circled_network-11.png"
+                             targetFrame="_blank" destination="http://www.fb.com"
+                             binding="#{backingBeanScope.backing_screen_master_staff_list.l5}"/>
+                    <af:spacer width="20px"/>
+                    <af:link icon="/maintw.png" hoverIcon="/1486731929_social_media_circled_network-06.png"
+                             targetFrame="_blank" destination="https://twitter.com/login" id="l6"
+                             binding="#{backingBeanScope.backing_screen_master_staff_list.l6}"/>
+                    <af:spacer width="20px"/>
+                    <af:link icon="/mainin.png" hoverIcon="/1486731954_social_media_circled_network-03.png"
+                             destination="https://www.linkedin.com/uas/login" targetFrame="_blank" id="l7"
+                             binding="#{backingBeanScope.backing_screen_master_staff_list.l7}"/>
+                </af:panelGroupLayout>
+            </af:panelGroupLayout>
+        </af:form>
+    </af:document>
+    <!--oracle-jdev-comment:auto-binding-backing-bean-name:backing_screen_master_staff_list-->
+</f:view>

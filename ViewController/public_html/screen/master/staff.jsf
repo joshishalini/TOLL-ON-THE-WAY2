@@ -1,0 +1,87 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html>
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+        beforePhase="#{backingBeanScope.backing_screen_master_staff.bphase}">
+    <af:document title="staff.jsf" id="d1" binding="#{backingBeanScope.backing_screen_master_staff.d1}">
+        <af:form id="f1" binding="#{backingBeanScope.backing_screen_master_staff.f1}">
+            <af:panelGroupLayout layout="horizontal" inlineStyle="height: 50px;width: 100%;background-color: #252839;">
+                <af:outputLabel value="TOLL ON THE WAY" id="ol5"
+                                inlineStyle="color: #b5b5b7;font-family: 'Rouge Script', cursive;text-transform:capitalize ; font-size: 30px;font-weight: normal;line-height: 48px; margin: 0 0 50px;text-align: center;text-shadow: 1px 1px 2px #082b34; "/>
+                <af:button icon="/power.png" text="Logout" hoverIcon="/power-button-outline(1).png"
+                           inlineStyle="height: 20px;width: 20px;border: transparent ;background: transparent ;margin-right: 30px;color:#f2b632 "
+                           action="#{backingBeanScope.backing_screen_master_staff.home}" id="b4"
+                           binding="#{backingBeanScope.backing_screen_master_staff.b4}"/>
+            </af:panelGroupLayout>
+            <af:spacer height="20px" width="15px"/>
+            <af:panelTabbed id="pt1" inlineStyle="margin-left: 20px;width: 1000px;"
+                            binding="#{backingBeanScope.backing_screen_master_staff.pt1}">
+                <af:showDetailItem text="New Payment" id="sdi2"
+                                   binding="#{backingBeanScope.backing_screen_master_staff.sdi2}">
+                    <af:table var="row" rowBandingInterval="0" id="t2"
+                              value="#{backingBeanScope.backing_screen_master_staff.adfTableTwo}"
+                              binding="#{backingBeanScope.backing_screen_master_staff.t2}">
+                        <af:column sortable="false" headerText="Order ID" id="c10">
+                            <af:outputText value="#{row.a}" id="ot10"/>
+                        </af:column>
+                        <af:column sortable="false" headerText="Customer ID" id="c11">
+                            <af:outputText value="#{row.b}" id="ot11"/>
+                        </af:column>
+                        <af:column sortable="false" headerText="Booth ID" id="c8">
+                            <af:outputText value="#{row.c}" id="ot8"/>
+                        </af:column>
+                        <af:column sortable="false" headerText="Vehicle Type" id="c9">
+                            <af:outputText value="#{row.d}" id="ot9"/>
+                        </af:column>
+                        <af:column sortable="false" headerText="Vehicle number" id="c12" width="200px;">
+                            <af:outputText value="#{row.e}" inlineStyle="font-weight: bold;font-size: 12pt" id="ot12"/>
+                        </af:column>
+                        <af:column sortable="false" headerText="Type of journey" id="c13">
+                            <af:outputText value="#{row.f}" id="ot13"/>
+                        </af:column>
+                        <af:column sortable="false" headerText="Date" id="c15">
+                            <af:outputText value="#{row.g}" id="ot15"/>
+                        </af:column>
+                        <af:column sortable="false" headerText="PAYED" id="c14">
+                            <af:button text="PAYED" action="#{backingBeanScope.backing_screen_master_staff.paydone}"
+                                       id="b2"/>
+                        </af:column>
+                    </af:table>
+                </af:showDetailItem>
+                <af:showDetailItem text="Old Payment" id="sdi1"
+                                   binding="#{backingBeanScope.backing_screen_master_staff.sdi1}">
+                    <af:table var="row" rowBandingInterval="0" id="t1"
+                              value="#{backingBeanScope.backing_screen_master_staff.adfTable}"
+                              binding="#{backingBeanScope.backing_screen_master_staff.t1}">
+                        <af:column sortable="false" headerText="Order ID" id="c1">
+                            <af:outputText value="#{row.id}" id="ot1"/>
+                        </af:column>
+                        <af:column sortable="false" headerText="Customer ID" id="c2">
+                            <af:outputText value="#{row.name}" id="ot2"/>
+                        </af:column>
+                        <af:column sortable="false" headerText="Booth ID" id="c3">
+                            <af:outputText value="#{row.state}" id="ot3"/>
+                        </af:column>
+                        <af:column sortable="false" headerText="Vehicle Type" id="c4">
+                            <af:outputText value="#{row.city}" id="ot4"/>
+                        </af:column>
+                        <af:column sortable="false" headerText="Vehicle number" width="200px;" id="c16">
+                            <af:outputText value="#{row.phno}" inlineStyle="font-weight: bold;font-size: 12pt"
+                                           id="ot7"/>
+                        </af:column>
+                        <af:column sortable="false" headerText="Type of journey" id="c5">
+                            <af:outputText value="#{row.payment}" id="ot5"/>
+                        </af:column>
+                        <af:column sortable="false" headerText="Date" id="c6">
+                            <af:outputText value="#{row.staff}" id="ot6"/>
+                        </af:column>
+                        <af:column sortable="false" headerText="PAYED" id="c7">
+                            <af:button text="PAYED" action="#{backingBeanScope.backing_screen_master_staff.ppay}"
+                                       id="b1"/>
+                        </af:column>
+                    </af:table>
+                </af:showDetailItem>
+            </af:panelTabbed>
+        </af:form>
+    </af:document>
+    <!--oracle-jdev-comment:auto-binding-backing-bean-name:backing_screen_master_staff-->
+</f:view>

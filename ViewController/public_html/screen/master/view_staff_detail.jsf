@@ -1,0 +1,154 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html>
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+    <af:document title="view_staff_detail.jsf" id="d1"
+                 binding="#{backingBeanScope.backing_screen_master_view_staff_detail.d1}">
+        <af:form id="f1" binding="#{backingBeanScope.backing_screen_master_view_staff_detail.f1}">
+         <af:panelGroupLayout id="pgl2" layout="vertical" binding="#{backingBeanScope.backing_screen_master_view_staff_detail.pgl2}">
+               <af:spacer height="18px"/>
+                <af:panelGroupLayout id="pgl3" layout="horizontal"
+                                     binding="#{backingBeanScope.backing_screen_master_view_staff_detail.pgl3}">
+                    <af:outputLabel value="VIEW STAFF DETAIL" id="ol3"
+                                    binding="#{backingBeanScope.backing_screen_master_view_staff_detail.ol3}"/>
+                </af:panelGroupLayout>
+                <af:spacer height="18px"/>
+            <af:panelGroupLayout id="pgl1" layout="horizontal" binding="#{backingBeanScope.backing_screen_master_view_staff_detail.pgl1}">
+                <af:outputLabel value="ID" id="ol1" 
+                                binding="#{backingBeanScope.backing_screen_master_view_staff_detail.ol1}"/>
+                                <af:spacer width="120px"/>
+                    <af:outputLabel value="" id="ol2"
+                                    binding="#{backingBeanScope.backing_screen_master_view_staff_detail.ol2}"/>
+        <af:outputLabel value="NAME" id="ol41"
+                                binding="#{backingBeanScope.backing_screen_master_view_staff_detail.ol41}"/>
+                    <af:outputLabel value="" id="ol4"
+                                    binding="#{backingBeanScope.backing_screen_master_view_staff_detail.ol4}"/>
+        </af:panelGroupLayout>
+            <af:spacer height="18px"/>
+                <af:panelGroupLayout id="pgl4" layout="horizontal"
+                                     binding="#{backingBeanScope.backing_screen_master_view_staff_detail.pgl4}">
+                    <af:outputLabel value="FATHER'S NAME" id="ol40"
+                                    binding="#{backingBeanScope.backing_screen_master_view_staff_detail.ol40}"/>
+                     <af:spacer width="30px"/>
+                    <af:outputLabel value="" id="ol5"
+                                    binding="#{backingBeanScope.backing_screen_master_view_staff_detail.ol5}"/>
+            <af:outputLabel value="DOB" id="ol39"
+                                    binding="#{backingBeanScope.backing_screen_master_view_staff_detail.ol39}"/>
+                    <af:outputLabel value="" id="ol6"
+                                    binding="#{backingBeanScope.backing_screen_master_view_staff_detail.ol6}"/>
+           </af:panelGroupLayout>
+                <af:spacer height="18px"/>
+                <af:panelGroupLayout id="pgl5" layout="horizontal"
+                                     binding="#{backingBeanScope.backing_screen_master_view_staff_detail.pgl5}">
+                    <af:outputLabel value="SEX" id="ol38"
+                                    binding="#{backingBeanScope.backing_screen_master_view_staff_detail.ol38}"/>
+                  <af:spacer width="107px"/>
+                    <af:outputLabel value="" id="ol7"
+                                    binding="#{backingBeanScope.backing_screen_master_view_staff_detail.ol7}"/>
+        <af:outputLabel value="PHONE NO." id="ol37"
+                                    binding="#{backingBeanScope.backing_screen_master_view_staff_detail.ol37}"/>
+                    <af:outputLabel value="" id="ol8"
+                                    binding="#{backingBeanScope.backing_screen_master_view_staff_detail.ol8}"/>
+         </af:panelGroupLayout>
+                <af:spacer height="18px"/>
+                <af:panelGroupLayout id="pgl6" layout="horizontal"
+                                     binding="#{backingBeanScope.backing_screen_master_view_staff_detail.pgl6}">
+                    <af:outputLabel value="E-MAIL" id="ol36"
+                                    binding="#{backingBeanScope.backing_screen_master_view_staff_detail.ol36}"/>
+                     <af:spacer width="86px"/>
+                    <af:outputLabel value="" id="ol9"
+                                    binding="#{backingBeanScope.backing_screen_master_view_staff_detail.ol9}"/>
+         <af:outputLabel value="GRADUATION" id="ol35"
+                                    binding="#{backingBeanScope.backing_screen_master_view_staff_detail.ol35}"/>
+                    <af:outputLabel value="" id="ol10"
+                                    binding="#{backingBeanScope.backing_screen_master_view_staff_detail.ol10}"/>
+       </af:panelGroupLayout>
+                <af:spacer height="18px"/>
+                <af:panelGroupLayout id="pgl7" layout="horizontal"
+                                     binding="#{backingBeanScope.backing_screen_master_view_staff_detail.pgl7}">
+                    <af:outputLabel value="ADDRESS LINE 1" id="ol34"
+                                    binding="#{backingBeanScope.backing_screen_master_view_staff_detail.ol34}"/>
+                    <af:spacer width="25.5px"/>
+                    <af:outputLabel value="" id="ol11"
+                                    binding="#{backingBeanScope.backing_screen_master_view_staff_detail.ol11}"/>
+          <af:outputLabel value="ADDRESS LINE 2" id="ol33"
+                                    binding="#{backingBeanScope.backing_screen_master_view_staff_detail.ol33}"/>
+                    <af:outputLabel value="" id="ol12"
+                                    binding="#{backingBeanScope.backing_screen_master_view_staff_detail.ol12}"/>
+         </af:panelGroupLayout>
+                <af:spacer height="18px"/>
+                <af:panelGroupLayout id="pgl8" layout="horizontal"
+                                     binding="#{backingBeanScope.backing_screen_master_view_staff_detail.pgl8}">
+                    <af:outputLabel value="CITY" id="ol32"
+                                    binding="#{backingBeanScope.backing_screen_master_view_staff_detail.ol32}"/>
+                  <af:spacer width="97.3px"/>
+                    <af:outputLabel value="" id="ol13"
+                                    binding="#{backingBeanScope.backing_screen_master_view_staff_detail.ol13}"/>
+        <af:outputLabel value="PIN CODE" id="ol31"
+                                    binding="#{backingBeanScope.backing_screen_master_view_staff_detail.ol31}"/>
+                    <af:outputLabel value="" id="ol14"
+                                    binding="#{backingBeanScope.backing_screen_master_view_staff_detail.ol14}"/>
+          </af:panelGroupLayout>
+                <af:spacer height="18px"/>
+                <af:panelGroupLayout id="pgl9" layout="horizontal"
+                                     binding="#{backingBeanScope.backing_screen_master_view_staff_detail.pgl9}">
+                    <af:outputLabel value="STATE" id="ol30"
+                                    binding="#{backingBeanScope.backing_screen_master_view_staff_detail.ol30}"/>
+                  <af:spacer width="88.5px"/>
+                    <af:outputLabel value="" id="ol15"
+                                    binding="#{backingBeanScope.backing_screen_master_view_staff_detail.ol15}"/>
+                <af:outputLabel value="COUNTRY" id="ol29"
+                                    binding="#{backingBeanScope.backing_screen_master_view_staff_detail.ol29}"/>
+                    <af:outputLabel value="" id="ol16"
+                                    binding="#{backingBeanScope.backing_screen_master_view_staff_detail.ol16}"/>
+           </af:panelGroupLayout>
+                <af:spacer height="18px"/>
+                <af:panelGroupLayout id="pgl10" layout="horizontal"
+                                     binding="#{backingBeanScope.backing_screen_master_view_staff_detail.pgl10}">
+                    <af:outputLabel value="BOOTH NAME" id="ol28"
+                                    binding="#{backingBeanScope.backing_screen_master_view_staff_detail.ol28}"/>
+                 <af:spacer width="70px"/>
+                    <af:outputLabel value="" id="ol17"
+                                    binding="#{backingBeanScope.backing_screen_master_view_staff_detail.ol17}"/>
+         <af:outputLabel value="POST" id="ol27"
+                                    binding="#{backingBeanScope.backing_screen_master_view_staff_detail.ol27}"/>
+                    <af:outputLabel value="" id="ol18"
+                                    binding="#{backingBeanScope.backing_screen_master_view_staff_detail.ol18}"/>
+             </af:panelGroupLayout>
+                <af:spacer height="18px"/>
+                <af:panelGroupLayout id="pgl11" layout="horizontal"
+                                     binding="#{backingBeanScope.backing_screen_master_view_staff_detail.pgl11}">
+                    <af:outputLabel value="POLICE VERIFICATION" id="ol26"
+                                    binding="#{backingBeanScope.backing_screen_master_view_staff_detail.ol18}"/>
+                    <af:outputLabel value="" id="ol19"
+                                    binding="#{backingBeanScope.backing_screen_master_view_staff_detail.ol19}"/>
+             <af:outputLabel value="CRIME RECORD" id="ol25"
+                                    binding="#{backingBeanScope.backing_screen_master_view_staff_detail.ol25}"/>
+                    <af:outputLabel value="" id="ol20"
+                                    binding="#{backingBeanScope.backing_screen_master_view_staff_detail.ol20}"/>
+            </af:panelGroupLayout>
+                </af:panelGroupLayout>
+                <af:spacer height="18px"/>
+                <af:panelGroupLayout id="pgl13"
+                                     binding="#{backingBeanScope.backing_screen_master_view_staff_detail.pgl13}"/>
+                <af:panelGroupLayout id="pgl12" layout="horizontal"
+                                     binding="#{backingBeanScope.backing_screen_master_view_staff_detail.pgl12}">
+                    <af:outputLabel value="USERNAME" id="ol24"
+                                    binding="#{backingBeanScope.backing_screen_master_view_staff_detail.ol24}"/>
+                <af:outputLabel value="" id="ol21"
+                                binding="#{backingBeanScope.backing_screen_master_view_staff_detail.ol21}"/>
+        <af:outputLabel value="PASSWORD" id="ol23"
+                                    binding="#{backingBeanScope.backing_screen_master_view_staff_detail.ol23}"/>
+                <af:outputLabel value="" id="ol22"
+                                binding="#{backingBeanScope.backing_screen_master_view_staff_detail.ol22}"/>
+         </af:panelGroupLayout>
+                <af:spacer height="18px"/>
+                <af:panelGroupLayout id="pgl14" layout="horizontal"
+                                     binding="#{backingBeanScope.backing_screen_master_view_staff_detail.pgl14}">
+                    <af:button text="SAVE" id="b1"  action="#{backingBeanScope.backing_screen_master_view_staff_detail.save}"
+                               binding="#{backingBeanScope.backing_screen_master_view_staff_detail.b1}"/>
+                </af:panelGroupLayout>
+         
+            </af:form>
+    </af:document>
+    <!--oracle-jdev-comment:auto-binding-backing-bean-name:backing_screen_master_view_staff_detail-->
+</f:view>

@@ -1,0 +1,182 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html>
+<f:view xmlns:f="http://java.sun.com/jsf/core" beforePhase="#{backingBeanScope.backing_screen_master_payment.bphase}"
+        xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+    <af:document title="payment.jsf" id="d1" binding="#{backingBeanScope.backing_screen_master_payment.d1}">
+        <af:form id="f1" binding="#{backingBeanScope.backing_screen_master_payment.f1}">
+            <af:panelGroupLayout id="pgl4" layout="horizontal"
+                                 inlineStyle="height: 50px;width: 100%;background-color: #252839;"
+                                 binding="#{backingBeanScope.backing_screen_master_payment.pgl4}">
+                <af:outputLabel value="Toll on the Way" id="ol22"
+                                inlineStyle="color: #b5b5b7;font-family: 'Rouge Script', cursive;text-transform:capitalize ; font-size: 30px;font-weight: normal;line-height: 48px; margin: 0 0 50px;text-align: center;text-shadow: 1px 1px 2px #082b34; "
+                                binding="#{backingBeanScope.backing_screen_master_payment.ol22}"/>
+                <af:link text="HISTORY" id="l1"
+                         inlineStyle="font-weight: bold;font-family:'Times New Roman';font-size:20px;"
+                         binding="#{backingBeanScope.backing_screen_master_payment.l1}"/>
+               <!-- <af:link text="PROFILE" id="l2"
+                         inlineStyle="font-weight: bold;font-family:'Times New Roman';font-size:20px;"
+                         binding="#{backingBeanScope.backing_screen_master_payment.l2}"/>-->
+                <af:link text="PAY TOLL"
+                         inlineStyle="font-weight: bold;margin-left: -100px;float: right;margin-right: 30px; font-family:'Times New Roman';font-size:20px;"
+                         id="l3" binding="#{backingBeanScope.backing_screen_master_payment.l3}"/>
+            </af:panelGroupLayout>
+            <af:spacer height="30px"/>
+            <af:panelGroupLayout id="pgl1" layout="vertical"
+                                 binding="#{backingBeanScope.backing_screen_master_payment.pgl1}">
+                <af:outputLabel value="Pay TOLL" id="ol16"
+                                inlineStyle="font-size: 22px;color: #252839;margin-left: 300px"
+                                binding="#{backingBeanScope.backing_screen_master_payment.ol16}"/>
+                <af:panelGroupLayout id="pgl2" layout="horizontal" inlineStyle="margin-left: 30px;margin-top: 15px;"
+                                     binding="#{backingBeanScope.backing_screen_master_payment.pgl2}">
+                    <af:spacer width="250px"/>
+                    <af:outputLabel value="BOOTH ID" id="ol1"
+                                    binding="#{backingBeanScope.backing_screen_master_payment.ol1}"/>
+                    <af:spacer width="50px"/>
+                    <af:outputLabel value="" id="ol2" binding="#{backingBeanScope.backing_screen_master_payment.ol2}"/>
+                    <af:spacer width="150px"/>
+                    <af:outputLabel value="BOOTH NAME" id="ol3"
+                                    binding="#{backingBeanScope.backing_screen_master_payment.ol3}"/>
+                    <af:spacer width="50px"/>
+                    <af:outputLabel value="" id="ol4" binding="#{backingBeanScope.backing_screen_master_payment.ol4}"/>
+                </af:panelGroupLayout>
+                <af:panelGroupLayout id="pgl3" layout="horizontal" inlineStyle="margin-left: 30px;margin-top: 15px;"
+                                     binding="#{backingBeanScope.backing_screen_master_payment.pgl3}">
+                    <af:spacer width="250px"/>
+                    <af:outputLabel value="CITY" id="ol5"
+                                    binding="#{backingBeanScope.backing_screen_master_payment.ol5}"/>
+                    <af:spacer width="60px"/>
+                    <af:outputLabel value="" id="ol6" binding="#{backingBeanScope.backing_screen_master_payment.ol6}"/>
+                    <af:spacer width="120px"/>
+                    <af:outputLabel value="STATE" id="ol7"
+                                    binding="#{backingBeanScope.backing_screen_master_payment.ol7}"/>
+                    <af:spacer width="80px"/>
+                    <af:outputLabel value="" id="ol8" binding="#{backingBeanScope.backing_screen_master_payment.ol8}"/>
+                </af:panelGroupLayout>
+                <af:panelGroupLayout layout="horizontal" inlineStyle="margin-left: 30px;margin-top: 15px;">
+                    <af:spacer width="250px"/>
+                    <af:outputLabel value="TRANSACTION NO." id="ol9"
+                                    binding="#{backingBeanScope.backing_screen_master_payment.ol9}"/>
+                    <af:inputText label="" disabled="true" id="it1"
+                                  binding="#{backingBeanScope.backing_screen_master_payment.it1}"/>
+                </af:panelGroupLayout>
+               <af:spacer height="15px"/>
+                <af:panelGroupLayout id="pgl10" layout="horizontal" binding="#{backingBeanScope.backing_screen_master_payment.pgl10}">
+                   <af:spacer width="280px"/>
+               
+                    <af:outputLabel value="Date" id="ol17"
+                                    binding="#{backingBeanScope.backing_screen_master_payment.ol17}"/>
+                 <af:spacer width="90px"/>
+                    <af:inputDate label="" id="id1"
+                                  binding="#{backingBeanScope.backing_screen_master_payment.id1}"/>
+                </af:panelGroupLayout>
+                <af:panelGroupLayout id="pgl5" layout="horizontal" inlineStyle="margin-left: 30px;margin-top: 15px;"
+                                     binding="#{backingBeanScope.backing_screen_master_payment.pgl5}">
+                    <af:spacer width="250px"/>
+                    <af:outputLabel value="VEHICLE TYPE" id="ol10"
+                                    binding="#{backingBeanScope.backing_screen_master_payment.ol10}"/>
+                    <af:spacer width="30px"/>
+                    <af:selectOneChoice id="soc1" autoSubmit="true"
+                                        valueChangeListener="#{backingBeanScope.backing_screen_master_payment.valchange}"
+                                        binding="#{backingBeanScope.backing_screen_master_payment.soc1}">
+                        <af:selectItem label="LIGHT MOTOR VEHICLE" value="1" id="si1"
+                                       binding="#{backingBeanScope.backing_screen_master_payment.si1}"/>
+                        <af:selectItem label="LIGHT GOODS VEHICLE" value="2" id="si2"
+                                       binding="#{backingBeanScope.backing_screen_master_payment.si2}"/>
+                        <af:selectItem label="BUS OR TRUCK(2 AXLES)" value="3" id="si3"
+                                       binding="#{backingBeanScope.backing_screen_master_payment.si3}"/>
+                        <af:selectItem label="3 AXLES COMMERCIAL VEHICLE" value="4" id="si4"
+                                       binding="#{backingBeanScope.backing_screen_master_payment.si4}"/>
+                        <af:selectItem label="FOUR TO SIX AXLES" value="5" id="si5"
+                                       binding="#{backingBeanScope.backing_screen_master_payment.si5}"/>
+                        <af:selectItem label="7 OR MORE AXLES" value="6" id="si6"
+                                       binding="#{backingBeanScope.backing_screen_master_payment.si6}"/>
+                        <af:selectItem label="MONTHLY PASS FOR VEHICLES" value="7" id="si7"
+                                       binding="#{backingBeanScope.backing_screen_master_payment.si7}"/>
+                    </af:selectOneChoice>
+                </af:panelGroupLayout>
+                <af:spacer height="15px"/>
+                <af:panelGroupLayout layout="vertical">
+                    <af:panelGroupLayout id="pgl9" layout="horizontal"
+                                         binding="#{backingBeanScope.backing_screen_master_payment.pgl9}">
+                        <af:spacer width="280px" height="15px"/>
+                        <af:outputLabel value="Type of Journey" id="ol14"
+                                        binding="#{backingBeanScope.backing_screen_master_payment.ol14}"/>
+                        <af:spacer width="3px"/>
+                        <af:selectOneChoice id="soc2" autoSubmit="true" contentStyle="width: 234px"
+                                            valueChangeListener="#{backingBeanScope.backing_screen_master_payment.changevalII}"
+                                            binding="#{backingBeanScope.backing_screen_master_payment.soc2}">
+                            <af:selectItem label="SINGLE JOURNEY" value="1" id="si11"
+                                           binding="#{backingBeanScope.backing_screen_master_payment.si11}"/>
+                            <af:selectItem label="RETURN JOURNEY" value="2" id="si8"
+                                           binding="#{backingBeanScope.backing_screen_master_payment.si8}"/>
+                            <af:selectItem label="MULTIPLE JOURNEY" value="3" id="si9"
+                                           binding="#{backingBeanScope.backing_screen_master_payment.si9}"/>
+                            <af:selectItem label="COMMERCIAL VEHICLE IN DISTRICT" value="4" id="si10"
+                                           binding="#{backingBeanScope.backing_screen_master_payment.si10}"/>
+                        </af:selectOneChoice>
+                    </af:panelGroupLayout>
+                </af:panelGroupLayout>
+                <af:panelGroupLayout id="pgl6" layout="horizontal" inlineStyle="margin-left: 30px;margin-top: 15px;"
+                                     binding="#{backingBeanScope.backing_screen_master_payment.pgl6}">
+                    <af:spacer width="250px"/>
+                    <af:outputLabel value="VEHICLE NO. OR PASS NO." id="ol11"
+                                    binding="#{backingBeanScope.backing_screen_master_payment.ol11}"/>
+                    <af:inputText label="" id="it3" placeholder="RJ 06 SB 7878" autoSubmit="true" autoComplete="on"
+                                  validator="#{backingBeanScope.backing_screen_master_payment.validator}"
+                                  inlineStyle="text-transform: none;" shortDesc="MUST BE IN CAPITAL LETTERS"
+                                  contentStyle="text-transform: none;"
+                                  binding="#{backingBeanScope.backing_screen_master_payment.it3}"/>
+                </af:panelGroupLayout>
+                <af:panelGroupLayout id="pgl7" layout="horizontal" inlineStyle="margin-left: 30px;margin-top: 15px;"
+                                     binding="#{backingBeanScope.backing_screen_master_payment.pgl7}">
+                    <af:spacer width="250px"/>
+                    <af:outputLabel value="AMOUNT" id="ol12"
+                                    binding="#{backingBeanScope.backing_screen_master_payment.ol12}"/>
+                    <af:spacer width="220px"/>
+                    <af:outputLabel value="" id="ol15" inlineStyle="font-size:16pt;"
+                                    binding="#{backingBeanScope.backing_screen_master_payment.ol15}"/>
+                </af:panelGroupLayout>
+                <af:panelGroupLayout id="pgl8" layout="horizontal" inlineStyle="margin-left: 30px;margin-top: 15px;"
+                                     binding="#{backingBeanScope.backing_screen_master_payment.pgl8}">
+                    <af:spacer width="260px"/>
+                    <af:button text="PAYMENT" inlineStyle="height:25px;width: 100px"
+                               action="#{backingBeanScope.backing_screen_master_payment.pay}" id="b1"
+                               binding="#{backingBeanScope.backing_screen_master_payment.b1}"/>
+                    <af:spacer width="50px"/>
+                    <af:button text="CANCLE" inlineStyle="height:25px;width: 100px"
+                               action="#{backingBeanScope.backing_screen_master_payment.cancle}" id="b3"
+                               binding="#{backingBeanScope.backing_screen_master_payment.b3}"/>
+                </af:panelGroupLayout>
+            </af:panelGroupLayout>
+            <af:spacer height="71px"/>
+            <af:panelGroupLayout layout="vertical" inlineStyle="background-color: #252839;height: 125.75px;"
+                                 styleClass="AFStretchWidth">
+                <af:outputLabel value="Terms and Conditions | Do Not Call Registry | Disclaimer | Multilingual Disclaimer | Code of Commitment |  Group Code of Business Conduct and thics | Use of Unparliamentary "
+                                inlineStyle="color: White;font-size: 10px;margin-left: 130px;margin-top: -30px"
+                                id="ol142" binding="#{backingBeanScope.backing_screen_master_payment.ol42}"/>
+                <af:outputLabel inlineStyle="color: White;font-size: 10px;margin-left: 370px"
+                                value="Language by Customers | Privacy | USA Patriot Act Certification | Fair Practice Code for Lenders"
+                                id="ol43" binding="#{backingBeanScope.backing_screen_master_payment.ol43}"/>
+                <af:spacer height="10px"/>
+                <af:outputLabel value="FOLLOW US :"
+                                inlineStyle="margin-left: 600px;font-family: Cooper ;font-weight: bolder;font-size:20px;color: White; "
+                                id="ol44" binding="#{backingBeanScope.backing_screen_master_payment.ol44}"/>
+                <af:panelGroupLayout layout="horizontal">
+                    <af:spacer width="595px" height="20px" id="s1"/>
+                    <af:link id="l5" icon="/mainfb.png" hoverIcon="/1486731875_social_media_circled_network-11.png"
+                             targetFrame="_blank" destination="http://www.fb.com"
+                             binding="#{backingBeanScope.backing_screen_master_payment.l5}"/>
+                    <af:spacer width="20px"/>
+                    <af:link icon="/maintw.png" hoverIcon="/1486731929_social_media_circled_network-06.png"
+                             targetFrame="_blank" destination="https://twitter.com/login" id="l6"
+                             binding="#{backingBeanScope.backing_screen_master_payment.l6}"/>
+                    <af:spacer width="20px"/>
+                    <af:link icon="/mainin.png" hoverIcon="/1486731954_social_media_circled_network-03.png"
+                             destination="https://www.linkedin.com/uas/login" targetFrame="_blank" id="l7"
+                             binding="#{backingBeanScope.backing_screen_master_payment.l7}"/>
+                </af:panelGroupLayout>
+            </af:panelGroupLayout>
+        </af:form>
+    </af:document>
+    <!--oracle-jdev-comment:auto-binding-backing-bean-name:backing_screen_master_payment-->
+</f:view>
